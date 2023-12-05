@@ -1,0 +1,289 @@
+---
+title: "Troubleshooting Bulk Imports"
+description: "This article covers howw you can navigate to the error logs linked to a certain Contact Import Bulk Action."
+---
+
+This article covers howw you can navigate to the error logs linked to a certain Contact Import Bulk Action and how to work through the errors to resolve them:  
+
+### **Master Bulk Importing Error Code List**
+| Error ID | Error Code | What the Error Means                                  | Steps to Resolve the Error                                           |
+| -------- | ---------- | ----------------------------------------------------- | ------------------------------------------------------------------ |
+| 1001     | Unknown    | Monstro is unable to process the file due to an unknown error. Your data was not imported. | Confirm that your file meets all requirements. Try to re-import after clearing your browser cache or using another browser. |
+| 1002     |            | The import file contains an Owner value that matches more than one user in the account. This usually occurs for names. The affected records were imported, but the Owner's property does not contain a value. | Replace the name of the owner with their email address in your import file, then re-import the file. You can also manually update the Owner property value in the affected records. |
+| 1003     |            | The import file contains more than one sheet. Your data was not imported. | Remove any additional sheets from your import file, then re-import. Review additional file requirements for importing into Monstro. |
+| 1004     |            | A required property in the import file contains an invalid value. The data in that row was not imported. | Confirm the format requirements of your specific property or the property type, update your file to match the correct format, then re-import. |
+| 1005     |            | The import file contains a value that does not match an existing option in an enumeration property. The affected records were still imported, but the enumeration property does not contain a value. | Identify the incorrect value by comparing your import file against the property in Monstro. You can choose to update the value in your import file to match an existing option or add the value as a custom option to your property. Once you're done, re-import the file or manually update the property value in the affected records. |
+| 1006     |            | During the import, the checkbox to update existing records using Contact IDs was selected. However, the Contact ID listed in the file did not match an existing ID in Monstro. The records were not imported. | Ensure that the [object] IDs are correct. You may need to export your existing records to get the correct object IDs. If you're not updating or associating existing objects in Monstro, do not select the checkbox during the import process. |
+| 1007     |            | The file you selected was not found. Your data was not imported. | Verify that you have saved your file to your computer and that it is the correct file type. Once you've done that, re-upload the file. |
+| 1008     |            | Failed validation of Email. The import file contains an email address that does not conform to the format of a typical email address. The import did not create or update the records. | For contacts, update your import file with the correct email, to make sure your format is correct with '@' '.com then re-import the file. |
+| 1009     |            | The import file contains a row with data that cannot be processed because there is no value against the record of its unique identifier (primary column). | Verify that your data value matches the correct format for the property you are importing, then re-import the file. You can also manually update the property value in the affected records. |
+| 1010     |            | The same value of the primary column is present against multiple records. Your data was imported against all HL records but there may be duplicates of the same record in Monstro | Choose a different column header to act as your primary column or fix any mistakes, then re-import the files. |
+| 1011     |            | The same unique value was used multiple times within your files. Your data was imported but there may be duplicates of the same record in Monstro. If you were trying to associate, your records were not associated. | Choose a different column header to act as your unique value or fix any mistakes, then re-import the files. |
+| 1012     |            | The same Contact ID was used multiple times within your files. The affected records were not updated or associated in Monstro. | Update your import file so that there is only one row with that Contact ID. Keep the row with the most up-to-date information that you want to be included in Monstro. Once you've removed duplicates, re-import the files. |
+| 1013     |            | The import file contains a value for a number property with non-numeric characters or numbers not formatted as per E.164 format. The affected records were imported, but the number property does not contain a value. | Update your import file with the correct numerical value and re-import, or manually update the property value in the affected records.  |
+| 1014     |            | The import file contains a date value that does not match the format you selected during the import process. The affected records were imported, but the date property does not contain a value. | Update your import file with the correct value and re-import, or manually update the property value in the affected records.  |
+| 1015     |            | The import file contains a record owner that does not match a user in Monstro. The affected records were imported, but the Owner field does not contain a value. | Update the data in the Owner.
+
+### **List of supported Time zones**
+| Time Zone                       | Time Zone                       |
+| ------------------------------- | ------------------------------- |
+| Etc/GMT+12                      | Europe/London                   |
+| Pacific/Midway                  | Africa/Cairo                    |
+| Pacific/Honolulu                | Africa/Harare                   |
+| America/Juneau                  | Europe/Amsterdam                |
+| US/Alaska                       | Europe/Belgrade                 |
+| America/Dawson                  | Europe/Brussels                 |
+| America/Los_Angeles             | Europe/Madrid                   |
+| America/Phoenix                 | Europe/Oslo                     |
+| America/Tijuana                 | Europe/Sarajevo                 |
+| US/Arizona                      | Africa/Nairobi                  |
+| America/Belize                  | Asia/Amman                      |
+| America/Boise                   | Asia/Baghdad                    |
+| America/Chihuahua               | Asia/Jerusalem                  |
+| America/Denver                  | Asia/Kuwait                     |
+| America/Edmonton                | Asia/Qatar                      |
+| America/Guatemala                | Europe/Athens                   |
+| America/Managua                 | Europe/Bucharest                |
+| America/Regina                  | Europe/Helsinki                 |
+| Canada/Saskatchewan              | Europe/Moscow                   |
+| US/Mountain                      | Asia/Baku                       |
+| America/Bahia_Banderas          | Asia/Dubai                      |
+| America/Bogota                  | Asia/Kabul                      |
+| America/Cancun                  | Asia/Tehran                     |
+| America/Chicago                  | Asia/Karachi                    |
+| America/Mexico_City             | Asia/Yekaterinburg              |
+| US/Central                       | Asia/Colombo                    |
+| America/Caracas                  | Asia/Kolkata                    |
+| America/Detroit                  | Asia/Calcutta                   |
+| America/Indiana/Indianapolis     | Asia/Kathmandu                  |
+| America/Louisville               | Asia/Almaty                     |
+| America/Manaus                   | Asia/Dhaka                      |
+| America/New_York                  | Asia/Rangoon                    |
+| America/Santiago                  | Asia/Bangkok                    |
+| America/Santo_Domingo            | Asia/Krasnoyarsk                |
+| America/Toronto                  | Asia/Irkutsk                    |
+| US/East-Indiana                   | Asia/Kuala_Lumpur               |
+| US/Eastern                        | Asia/Shanghai                   |
+| America/Argentina/Buenos_Aires    | Asia/Taipei                     |
+| America/Glace_Bay                 | Australia/Perth                 |
+| America/Montevideo                | Asia/Seoul                      |
+| America/Sao_Paulo                 | Asia/Tokyo                      |
+| Canada/Atlantic                    | Asia/Yakutsk                    |
+| America/St_Johns                   | Australia/Adelaide               |
+| Canada/Newfoundland                | Australia/Darwin                 |
+| America/Godthab                    | Asia/Vladivostok                 |
+| America/Noronha                    | Australia/Brisbane               |
+| Etc/GMT+2                          | Australia/Canberra               |
+| Atlantic/Cape_Verde                | Australia/Hobart                 |
+| Atlantic/Azores                     | Australia/Sydney                 |
+| UTC                                | Pacific/Guam                     |
+| Africa/Algiers                      | Asia/Magadan                     |
+| Africa/Casablanca                   | Pacific/Auckland                 |
+| Africa/Lagos                        | Pacific/Fiji                     |
+| Atlantic/Canary                     | Pacific/Tongatapu                |
+
+
+## **Accepted Custom Field Format Requirements**
+
+Depending on the records you are importing, your file could include the following columns:
+  
+**Date Picker**
+
+-   Acceptable formats-
+    -   mm/dd/yyyy (e.g. 10/28/2020)
+    -   yyyy/mm/dd (e.g. 2020/10/28)
+    -   You can also replace '/' with '-' '.' and it'll recognize the uploaded fields as a Date field (Available in our future release!)
+
+**Multiple Options, Checkbox, Textbox List**
+
+-   Acceptable formats-
+    -   Value 1, Value 2, Value 3 ...... (e.g. Blue, Yellow, Green or Blue, Yellow, Green or Blue, Yellow , Green)
+    -   You can also replace ' , ' with ' ; ' ' . ' and it'll recognize the uploaded fields as the aforementioned field
+    - 
+**Radio, Single Option**
+
+-   Acceptable formats:
+    -   Value 1 (e.g. Blue)
+
+  
+
+**File Upload, Signature**
+
+-   Not Supported
+
+  
+
+**Contact Owner**
+
+-   To assign an owner to your contacts during the import, include the name of the 'User'
+-   Acceptable formats:
+    -   FirstName LastName (e.g. Logan Paul or logan paul)
+    -   LastName FirstName (e.g. Paul Logan or paul logan)
+    -   **Note #1**: Unless the user has both FirstName and Last Name, the system will  not  recognize it during the upload
+
+  
+
+**Tags**
+
+-   Acceptable formats-
+    -   Value 1, Value 2, Value 3 ...... (e.g. Blue,Yellow,Green or Blue, Yellow, Green or Blue , Yellow , Green)
+        -   You can also replace ' , ' with ' ; ' ' . ' and it'll recognize the uploaded fields as the aforementioned field.
+
+| Tags (Example Formats) | Status               |
+| ----------------------- | -------------------- |
+| lowercase              | ok                   |
+| UPPERCASE              | ok (will be lowercased) |
+| ProperCase             | ok (will be lowercased) |
+| with a space           | ok                   |
+| With A Space           | ok (will be lowercased) |
+| pre-existing tag       | ok (maps successfully) |
+
+  
+**DoNotDisturb**
+
+-   Acceptable formats-
+    -   True or False ( true or false )
+    -   Yes or No ( yes or no )
+
+ 
+**Phone Number**
+
+-   For the vast majority of cases, as long as you format the phone numbers in E.164 (Ex: +1 1234567890) our system will recognize it as valid- irrespective of the default Country picked at the sub-account level
+    -   Additionally, if you have set the Country to the US, the following would work perfectly fine as well
+        -   123-456-7890
+        -   (123) 4567890
+        -   1234567890
+        -   Furthermore, if you are working with international numbers (Outside the US), we'd encourage you to visit:  [https://libphonenumber.appspot.com/](https://libphonenumber.appspot.com/)  and run your phone number format by the tool in conjunction with the codes below to ascertain its appropriateness for upload.
+     
+-    **Numerical**
+	 -   Acceptable formats-
+	        -   1.23.4
+	        -   1234
+	        -   .123
+
+-   **Monetary**
+    -   Acceptable formats-
+        -   1234
+        -   1,234,234,333
+
+
+### **List of supported Countries**
+| Code | Country                           |
+| ---- | --------------------------------- |
+| BD   | Bangladesh                        |
+| BE   | Belgium                           |
+| BF   | Burkina Faso                      |
+| BG   | Bulgaria                          |
+| BA   | Bosnia and Herzegovina           |
+| BB   | Barbados                          |
+| WF   | Wallis and Futuna                 |
+| BL   | Saint Barthelemy                  |
+| BM   | Bermuda                            |
+| BN   | Brunei                            |
+| BO   | Bolivia                           |
+| BH   | Bahrain                           |
+| BI   | Burundi                           |
+| BJ   | Benin                             |
+| BT   | Bhutan                            |
+| JM   | Jamaica                           |
+| BV   | Bouvet Island                      |
+| BW   | Botswana                          |
+| WS   | Samoa                             |
+| BQ   | Bonaire, Saint Eustatius and Saba |
+| BR   | Brazil                            |
+| BS   | Bahamas                           |
+| JE   | Jersey                            |
+| BY   | Belarus                           |
+| BZ   | Belize                            |
+| RU   | Russia                            |
+| RW   | Rwanda                            |
+| RS   | Serbia                            |
+| TL   | East Timor                        |
+| RE   | Reunion                           |
+| TM   | Turkmenistan                      |
+| TJ   | Tajikistan                        |
+| RO   | Romania                           |
+| TK   | Tokelau                           |
+| GW   | Guinea-Bissau                     |
+| GU   | Guam                              |
+| GT   | Guatemala                         |
+| GS   | South Georgia and the South Sandwich Islands |
+| GR   | Greece                            |
+| GQ   | Equatorial Guinea                 |
+| GP   | Guadeloupe                         |
+| JP   | Japan                             |
+| GY   | Guyana                            |
+| GG   | Guernsey                           |
+| GF   | French Guiana                     |
+| GE   | Georgia                           |
+| GD   | Grenada                           |
+| GB   | United Kingdom                    |
+| GA   | Gabon                             |
+| SV   | El Salvador                       |
+| GN   | Guinea                            |
+| GM   | Gambia                            |
+| GL   | Greenland                         |
+| GI   | Gibraltar                          |
+| GH   | Ghana                             |
+| OM   | Oman                              |
+| TN   | Tunisia                            |
+| JO   | Jordan                            |
+| HR   | Croatia                           |
+| HT   | Haiti                             |
+| HU   | Hungary                           |
+| HK   | Hong Kong                          |
+| HN   | Honduras                          |
+| HM   | Heard Island and McDonald Islands  |
+| VE   | Venezuela                          |
+| PR   | Puerto Rico                        |
+| PS   | Palestinian Territory              |
+| PW   | Palau                             |
+| PT   | Portugal                           |
+| SJ   | Svalbard and Jan Mayen            |
+| PY   | Paraguay                           |
+| IQ   | Iraq                              |
+| PA   | Panama                            |
+| PF   | French Polynesia                   |
+| PG   | Papua New Guinea                   |
+| PE   | Peru                              |
+| PK   | Pakistan                           |
+| PH   | Philippines                        |
+| PN   | Pitcairn                           |
+| PL   | Poland                            |
+| PM   | Saint Pierre and Miquelon         |
+| ZM   | Zambia                            |
+| EH   | Western Sahara                     |
+| EE   | Estonia                           |
+| EG   | Egypt                             |
+| ZA   | South Africa                       |
+| EC   | Ecuador                            |
+| IT   | Italy                              |
+| VN   | Vietnam                            |
+| SB   | Solomon Islands                    |
+| ET   | Ethiopia                           |
+| SO   | Somalia                            |
+| ZW   | Zimbabwe                           |
+| SA   | Saudi Arabia                       |
+| ES   | Spain                              |
+| ER   | Eritrea                            |
+| ME   | Montenegro                         |
+| MD   | Moldova                            |
+| MG   | Madagascar                         |
+| MF   | Saint Martin                       |
+| MA   | Morocco                            |
+| MC   | Monaco                             |
+| UZ   | Uzbekistan                         |
+| MM   | Myanmar                            |
+| ML   | Mali                               |
+| MO   | Macao                              |
+| MN   | Mongolia                           |
+| MH   | Marshall Islands                   |
+| MK   | Macedonia                          |
+| MU   | Mauritius                          |
+| MT   | Malta                              |
+| MW   | Malawi                             |
+| MV   | Maldives                           |
+| MQ   | Martinique                         |
+| MP   | Northern Mariana Islands           |
+| MS   | Montserrat                         |
+| MR   | Mauritania
