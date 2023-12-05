@@ -1,87 +1,333 @@
 ---
 title: "Troubleshooting Bulk Imports"
-description: "This article covers howw you can navigate to the error logs linked to a certain Contact Import Bulk Action."
+description: "This article covers how you can navigate to the error logs linked to a certain Contact Import Bulk Action."
 ---
 
 This article covers howw you can navigate to the error logs linked to a certain Contact Import Bulk Action and how to work through the errors to resolve them:  
 
 ### **Master Bulk Importing Error Code List**
-| Error ID | Error Code | What the Error Means                                  | Steps to Resolve the Error                                           |
-| -------- | ---------- | ----------------------------------------------------- | ------------------------------------------------------------------ |
-| 1001     | Unknown    | Monstro is unable to process the file due to an unknown error. Your data was not imported. | Confirm that your file meets all requirements. Try to re-import after clearing your browser cache or using another browser. |
-| 1002     |            | The import file contains an Owner value that matches more than one user in the account. This usually occurs for names. The affected records were imported, but the Owner's property does not contain a value. | Replace the name of the owner with their email address in your import file, then re-import the file. You can also manually update the Owner property value in the affected records. |
-| 1003     |            | The import file contains more than one sheet. Your data was not imported. | Remove any additional sheets from your import file, then re-import. Review additional file requirements for importing into Monstro. |
-| 1004     |            | A required property in the import file contains an invalid value. The data in that row was not imported. | Confirm the format requirements of your specific property or the property type, update your file to match the correct format, then re-import. |
-| 1005     |            | The import file contains a value that does not match an existing option in an enumeration property. The affected records were still imported, but the enumeration property does not contain a value. | Identify the incorrect value by comparing your import file against the property in Monstro. You can choose to update the value in your import file to match an existing option or add the value as a custom option to your property. Once you're done, re-import the file or manually update the property value in the affected records. |
-| 1006     |            | During the import, the checkbox to update existing records using Contact IDs was selected. However, the Contact ID listed in the file did not match an existing ID in Monstro. The records were not imported. | Ensure that the [object] IDs are correct. You may need to export your existing records to get the correct object IDs. If you're not updating or associating existing objects in Monstro, do not select the checkbox during the import process. |
-| 1007     |            | The file you selected was not found. Your data was not imported. | Verify that you have saved your file to your computer and that it is the correct file type. Once you've done that, re-upload the file. |
-| 1008     |            | Failed validation of Email. The import file contains an email address that does not conform to the format of a typical email address. The import did not create or update the records. | For contacts, update your import file with the correct email, to make sure your format is correct with '@' '.com then re-import the file. |
-| 1009     |            | The import file contains a row with data that cannot be processed because there is no value against the record of its unique identifier (primary column). | Verify that your data value matches the correct format for the property you are importing, then re-import the file. You can also manually update the property value in the affected records. |
-| 1010     |            | The same value of the primary column is present against multiple records. Your data was imported against all HL records but there may be duplicates of the same record in Monstro | Choose a different column header to act as your primary column or fix any mistakes, then re-import the files. |
-| 1011     |            | The same unique value was used multiple times within your files. Your data was imported but there may be duplicates of the same record in Monstro. If you were trying to associate, your records were not associated. | Choose a different column header to act as your unique value or fix any mistakes, then re-import the files. |
-| 1012     |            | The same Contact ID was used multiple times within your files. The affected records were not updated or associated in Monstro. | Update your import file so that there is only one row with that Contact ID. Keep the row with the most up-to-date information that you want to be included in Monstro. Once you've removed duplicates, re-import the files. |
-| 1013     |            | The import file contains a value for a number property with non-numeric characters or numbers not formatted as per E.164 format. The affected records were imported, but the number property does not contain a value. | Update your import file with the correct numerical value and re-import, or manually update the property value in the affected records.  |
-| 1014     |            | The import file contains a date value that does not match the format you selected during the import process. The affected records were imported, but the date property does not contain a value. | Update your import file with the correct value and re-import, or manually update the property value in the affected records.  |
-| 1015     |            | The import file contains a record owner that does not match a user in Monstro. The affected records were imported, but the Owner field does not contain a value. | Update the data in the Owner.
+<table>
+    <tr>
+        <td>Error ID</td>
+        <td>Error Code</td>
+        <td>What the Error Means</td>
+        <td>Steps to Resolve the Error</td>
+    </tr>
+    <tr>
+        <td>1001</td>
+        <td>Unknown</td>
+        <td>Monstro is unable to process the file due to an unknown error. Your data was not imported.</td>
+        <td>Confirm that your file meets all requirements. Try to re-import after clearing your browser cache or using another browser.</td>
+    </tr>
+    <tr>
+        <td>1002</td>
+        <td></td>
+        <td>The import file contains an Owner value that matches more than one user in the account. This usually occurs for names. The affected records were imported, but the Owner&#39;s property does not contain a value.</td>
+        <td>Replace the name of the owner with their email address in your import file, then re-import the file. You can also manually update the Owner property value in the affected records.</td>
+    </tr>
+    <tr>
+        <td>1003</td>
+        <td></td>
+        <td>The import file contains more than one sheet. Your data was not imported.</td>
+        <td>Remove any additional sheets from your import file, then re-import. Review additional file requirements for importing into Monstro.</td>
+    </tr>
+    <tr>
+        <td>1004</td>
+        <td></td>
+        <td>A required property in the import file contains an invalid value. The data in that row was not imported.</td>
+        <td>Confirm the format requirements of your specific property or the property type, update your file to match the correct format, then re-import.</td>
+    </tr>
+    <tr>
+        <td>1005</td>
+        <td></td>
+        <td>The import file contains a value that does not match an existing option in an enumeration property. The affected records were still imported, but the enumeration property does not contain a value.</td>
+        <td>Identify the incorrect value by comparing your import file against the property in Monstro. You can choose to update the value in your import file to match an existing option or add the value as a custom option to your property. Once you&#39;re done, re-import the file or manually update the property value in the affected records.</td>
+    </tr>
+    <tr>
+        <td>1006</td>
+        <td></td>
+        <td>During the import, the checkbox to update existing records using Contact IDs was selected. However, the Contact ID listed in the file did not match an existing ID in Monstro. The records were not imported.</td>
+        <td>Ensure that the [object] IDs are correct. You may need to export your existing records to get the correct object IDs. If you&#39;re not updating or associating existing objects in Monstro, do not select the checkbox during the import process.</td>
+    </tr>
+    <tr>
+        <td>1007</td>
+        <td></td>
+        <td>The file you selected was not found. Your data was not imported.</td>
+        <td>Verify that you have saved your file to your computer and that it is the correct file type. Once you&#39;ve done that, re-upload the file.</td>
+    </tr>
+    <tr>
+        <td>1008</td>
+        <td></td>
+        <td>Failed validation of Email. The import file contains an email address that does not conform to the format of a typical email address. The import did not create or update the records.</td>
+        <td>For contacts, update your import file with the correct email, to make sure your format is correct with &#39;@&#39; &#39;.com then re-import the file.</td>
+    </tr>
+    <tr>
+        <td>1009</td>
+        <td></td>
+        <td>The import file contains a row with data that cannot be processed because there is no value against the record of its unique identifier (primary column).</td>
+        <td>Verify that your data value matches the correct format for the property you are importing, then re-import the file. You can also manually update the property value in the affected records.</td>
+    </tr>
+    <tr>
+        <td>1010</td>
+        <td></td>
+        <td>The same value of the primary column is present against multiple records. Your data was imported against all HL records but there may be duplicates of the same record in Monstro</td>
+        <td>Choose a different column header to act as your primary column or fix any mistakes, then re-import the files.</td>
+    </tr>
+    <tr>
+        <td>1011</td>
+        <td></td>
+        <td>The same unique value was used multiple times within your files. Your data was imported but there may be duplicates of the same record in Monstro. If you were trying to associate, your records were not associated.</td>
+        <td>Choose a different column header to act as your unique value or fix any mistakes, then re-import the files.</td>
+    </tr>
+    <tr>
+        <td>1012</td>
+        <td></td>
+        <td>The same Contact ID was used multiple times within your files. The affected records were not updated or associated in Monstro.</td>
+        <td>Update your import file so that there is only one row with that Contact ID. Keep the row with the most up-to-date information that you want to be included in Monstro. Once you&#39;ve removed duplicates, re-import the files.</td>
+    </tr>
+    <tr>
+        <td>1013</td>
+        <td></td>
+        <td>The import file contains a value for a number property with non-numeric characters or numbers not formatted as per E.164 format. The affected records were imported, but the number property does not contain a value.</td>
+        <td>Update your import file with the correct numerical value and re-import, or manually update the property value in the affected records.</td>
+    </tr>
+    <tr>
+        <td>1014</td>
+        <td></td>
+        <td>The import file contains a date value that does not match the format you selected during the import process. The affected records were imported, but the date property does not contain a value.</td>
+        <td>Update your import file with the correct value and re-import, or manually update the property value in the affected records.</td>
+    </tr>
+    <tr>
+        <td>1015</td>
+        <td></td>
+        <td>The import file contains a record owner that does not match a user in Monstro. The affected records were imported, but the Owner field does not contain a value.</td>
+        <td>Update the data in the Owner.</td>
+    </tr>
+</table>
 
 ### **List of supported Time zones**
-| Time Zone                       | Time Zone                       |
-| ------------------------------- | ------------------------------- |
-| Etc/GMT+12                      | Europe/London                   |
-| Pacific/Midway                  | Africa/Cairo                    |
-| Pacific/Honolulu                | Africa/Harare                   |
-| America/Juneau                  | Europe/Amsterdam                |
-| US/Alaska                       | Europe/Belgrade                 |
-| America/Dawson                  | Europe/Brussels                 |
-| America/Los_Angeles             | Europe/Madrid                   |
-| America/Phoenix                 | Europe/Oslo                     |
-| America/Tijuana                 | Europe/Sarajevo                 |
-| US/Arizona                      | Africa/Nairobi                  |
-| America/Belize                  | Asia/Amman                      |
-| America/Boise                   | Asia/Baghdad                    |
-| America/Chihuahua               | Asia/Jerusalem                  |
-| America/Denver                  | Asia/Kuwait                     |
-| America/Edmonton                | Asia/Qatar                      |
-| America/Guatemala                | Europe/Athens                   |
-| America/Managua                 | Europe/Bucharest                |
-| America/Regina                  | Europe/Helsinki                 |
-| Canada/Saskatchewan              | Europe/Moscow                   |
-| US/Mountain                      | Asia/Baku                       |
-| America/Bahia_Banderas          | Asia/Dubai                      |
-| America/Bogota                  | Asia/Kabul                      |
-| America/Cancun                  | Asia/Tehran                     |
-| America/Chicago                  | Asia/Karachi                    |
-| America/Mexico_City             | Asia/Yekaterinburg              |
-| US/Central                       | Asia/Colombo                    |
-| America/Caracas                  | Asia/Kolkata                    |
-| America/Detroit                  | Asia/Calcutta                   |
-| America/Indiana/Indianapolis     | Asia/Kathmandu                  |
-| America/Louisville               | Asia/Almaty                     |
-| America/Manaus                   | Asia/Dhaka                      |
-| America/New_York                  | Asia/Rangoon                    |
-| America/Santiago                  | Asia/Bangkok                    |
-| America/Santo_Domingo            | Asia/Krasnoyarsk                |
-| America/Toronto                  | Asia/Irkutsk                    |
-| US/East-Indiana                   | Asia/Kuala_Lumpur               |
-| US/Eastern                        | Asia/Shanghai                   |
-| America/Argentina/Buenos_Aires    | Asia/Taipei                     |
-| America/Glace_Bay                 | Australia/Perth                 |
-| America/Montevideo                | Asia/Seoul                      |
-| America/Sao_Paulo                 | Asia/Tokyo                      |
-| Canada/Atlantic                    | Asia/Yakutsk                    |
-| America/St_Johns                   | Australia/Adelaide               |
-| Canada/Newfoundland                | Australia/Darwin                 |
-| America/Godthab                    | Asia/Vladivostok                 |
-| America/Noronha                    | Australia/Brisbane               |
-| Etc/GMT+2                          | Australia/Canberra               |
-| Atlantic/Cape_Verde                | Australia/Hobart                 |
-| Atlantic/Azores                     | Australia/Sydney                 |
-| UTC                                | Pacific/Guam                     |
-| Africa/Algiers                      | Asia/Magadan                     |
-| Africa/Casablanca                   | Pacific/Auckland                 |
-| Africa/Lagos                        | Pacific/Fiji                     |
-| Atlantic/Canary                     | Pacific/Tongatapu                |
-
+<table>
+    <tr>
+        <td>Time Zone</td>
+        <td>Time Zone</td>
+    </tr>
+    <tr>
+        <td>Etc/GMT+12</td>
+        <td>Europe/London</td>
+    </tr>
+    <tr>
+        <td>Pacific/Midway</td>
+        <td>Africa/Cairo</td>
+    </tr>
+    <tr>
+        <td>Pacific/Honolulu</td>
+        <td>Africa/Harare</td>
+    </tr>
+    <tr>
+        <td>America/Juneau</td>
+        <td>Europe/Amsterdam</td>
+    </tr>
+    <tr>
+        <td>US/Alaska</td>
+        <td>Europe/Belgrade</td>
+    </tr>
+    <tr>
+        <td>America/Dawson</td>
+        <td>Europe/Brussels</td>
+    </tr>
+    <tr>
+        <td>America/Los_Angeles</td>
+        <td>Europe/Madrid</td>
+    </tr>
+    <tr>
+        <td>America/Phoenix</td>
+        <td>Europe/Oslo</td>
+    </tr>
+    <tr>
+        <td>America/Tijuana</td>
+        <td>Europe/Sarajevo</td>
+    </tr>
+    <tr>
+        <td>US/Arizona</td>
+        <td>Africa/Nairobi</td>
+    </tr>
+    <tr>
+        <td>America/Belize</td>
+        <td>Asia/Amman</td>
+    </tr>
+    <tr>
+        <td>America/Boise</td>
+        <td>Asia/Baghdad</td>
+    </tr>
+    <tr>
+        <td>America/Chihuahua</td>
+        <td>Asia/Jerusalem</td>
+    </tr>
+    <tr>
+        <td>America/Denver</td>
+        <td>Asia/Kuwait</td>
+    </tr>
+    <tr>
+        <td>America/Edmonton</td>
+        <td>Asia/Qatar</td>
+    </tr>
+    <tr>
+        <td>America/Guatemala</td>
+        <td>Europe/Athens</td>
+    </tr>
+    <tr>
+        <td>America/Managua</td>
+        <td>Europe/Bucharest</td>
+    </tr>
+    <tr>
+        <td>America/Regina</td>
+        <td>Europe/Helsinki</td>
+    </tr>
+    <tr>
+        <td>Canada/Saskatchewan</td>
+        <td>Europe/Moscow</td>
+    </tr>
+    <tr>
+        <td>US/Mountain</td>
+        <td>Asia/Baku</td>
+    </tr>
+    <tr>
+        <td>America/Bahia_Banderas</td>
+        <td>Asia/Dubai</td>
+    </tr>
+    <tr>
+        <td>America/Bogota</td>
+        <td>Asia/Kabul</td>
+    </tr>
+    <tr>
+        <td>America/Cancun</td>
+        <td>Asia/Tehran</td>
+    </tr>
+    <tr>
+        <td>America/Chicago</td>
+        <td>Asia/Karachi</td>
+    </tr>
+    <tr>
+        <td>America/Mexico_City</td>
+        <td>Asia/Yekaterinburg</td>
+    </tr>
+    <tr>
+        <td>US/Central</td>
+        <td>Asia/Colombo</td>
+    </tr>
+    <tr>
+        <td>America/Caracas</td>
+        <td>Asia/Kolkata</td>
+    </tr>
+    <tr>
+        <td>America/Detroit</td>
+        <td>Asia/Calcutta</td>
+    </tr>
+    <tr>
+        <td>America/Indiana/Indianapolis</td>
+        <td>Asia/Kathmandu</td>
+    </tr>
+    <tr>
+        <td>America/Louisville</td>
+        <td>Asia/Almaty</td>
+    </tr>
+    <tr>
+        <td>America/Manaus</td>
+        <td>Asia/Dhaka</td>
+    </tr>
+    <tr>
+        <td>America/New_York</td>
+        <td>Asia/Rangoon</td>
+    </tr>
+    <tr>
+        <td>America/Santiago</td>
+        <td>Asia/Bangkok</td>
+    </tr>
+    <tr>
+        <td>America/Santo_Domingo</td>
+        <td>Asia/Krasnoyarsk</td>
+    </tr>
+    <tr>
+        <td>America/Toronto</td>
+        <td>Asia/Irkutsk</td>
+    </tr>
+    <tr>
+        <td>US/East-Indiana</td>
+        <td>Asia/Kuala_Lumpur</td>
+    </tr>
+    <tr>
+        <td>US/Eastern</td>
+        <td>Asia/Shanghai</td>
+    </tr>
+    <tr>
+        <td>America/Argentina/Buenos_Aires</td>
+        <td>Asia/Taipei</td>
+    </tr>
+    <tr>
+        <td>America/Glace_Bay</td>
+        <td>Australia/Perth</td>
+    </tr>
+    <tr>
+        <td>America/Montevideo</td>
+        <td>Asia/Seoul</td>
+    </tr>
+    <tr>
+        <td>America/Sao_Paulo</td>
+        <td>Asia/Tokyo</td>
+    </tr>
+    <tr>
+        <td>Canada/Atlantic</td>
+        <td>Asia/Yakutsk</td>
+    </tr>
+    <tr>
+        <td>America/St_Johns</td>
+        <td>Australia/Adelaide</td>
+    </tr>
+    <tr>
+        <td>Canada/Newfoundland</td>
+        <td>Australia/Darwin</td>
+    </tr>
+    <tr>
+        <td>America/Godthab</td>
+        <td>Asia/Vladivostok</td>
+    </tr>
+    <tr>
+        <td>America/Noronha</td>
+        <td>Australia/Brisbane</td>
+    </tr>
+    <tr>
+        <td>Etc/GMT+2</td>
+        <td>Australia/Canberra</td>
+    </tr>
+    <tr>
+        <td>Atlantic/Cape_Verde</td>
+        <td>Australia/Hobart</td>
+    </tr>
+    <tr>
+        <td>Atlantic/Azores</td>
+        <td>Australia/Sydney</td>
+    </tr>
+    <tr>
+        <td>UTC</td>
+        <td>Pacific/Guam</td>
+    </tr>
+    <tr>
+        <td>Africa/Algiers</td>
+        <td>Asia/Magadan</td>
+    </tr>
+    <tr>
+        <td>Africa/Casablanca</td>
+        <td>Pacific/Auckland</td>
+    </tr>
+    <tr>
+        <td>Africa/Lagos</td>
+        <td>Pacific/Fiji</td>
+    </tr>
+    <tr>
+        <td>Atlantic/Canary</td>
+        <td>Pacific/Tongatapu</td>
+    </tr>
+</table>
 
 ## **Accepted Custom Field Format Requirements**
 
@@ -129,14 +375,36 @@ Depending on the records you are importing, your file could include the followin
     -   Value 1, Value 2, Value 3 ...... (e.g. Blue,Yellow,Green or Blue, Yellow, Green or Blue , Yellow , Green)
         -   You can also replace ' , ' with ' ; ' ' . ' and it'll recognize the uploaded fields as the aforementioned field.
 
-| Tags (Example Formats) | Status               |
-| ----------------------- | -------------------- |
-| lowercase              | ok                   |
-| UPPERCASE              | ok (will be lowercased) |
-| ProperCase             | ok (will be lowercased) |
-| with a space           | ok                   |
-| With A Space           | ok (will be lowercased) |
-| pre-existing tag       | ok (maps successfully) |
+<table>
+    <tr>
+        <td>Tags (Example Formats)</td>
+        <td>Status</td>
+    </tr>
+    <tr>
+        <td>lowercase</td>
+        <td>ok</td>
+    </tr>
+    <tr>
+        <td>UPPERCASE</td>
+        <td>ok (will be lowercased)</td>
+    </tr>
+    <tr>
+        <td>ProperCase</td>
+        <td>ok (will be lowercased)</td>
+    </tr>
+    <tr>
+        <td>with a space</td>
+        <td>ok</td>
+    </tr>
+    <tr>
+        <td>With A Space</td>
+        <td>ok (will be lowercased)</td>
+    </tr>
+    <tr>
+        <td>pre-existing tag</td>
+        <td>ok (maps successfully)</td>
+    </tr>
+</table>
 
   
 **DoNotDisturb**
@@ -168,122 +436,477 @@ Depending on the records you are importing, your file could include the followin
 
 
 ### **List of supported Countries**
-| Code | Country                           |
-| ---- | --------------------------------- |
-| BD   | Bangladesh                        |
-| BE   | Belgium                           |
-| BF   | Burkina Faso                      |
-| BG   | Bulgaria                          |
-| BA   | Bosnia and Herzegovina           |
-| BB   | Barbados                          |
-| WF   | Wallis and Futuna                 |
-| BL   | Saint Barthelemy                  |
-| BM   | Bermuda                            |
-| BN   | Brunei                            |
-| BO   | Bolivia                           |
-| BH   | Bahrain                           |
-| BI   | Burundi                           |
-| BJ   | Benin                             |
-| BT   | Bhutan                            |
-| JM   | Jamaica                           |
-| BV   | Bouvet Island                      |
-| BW   | Botswana                          |
-| WS   | Samoa                             |
-| BQ   | Bonaire, Saint Eustatius and Saba |
-| BR   | Brazil                            |
-| BS   | Bahamas                           |
-| JE   | Jersey                            |
-| BY   | Belarus                           |
-| BZ   | Belize                            |
-| RU   | Russia                            |
-| RW   | Rwanda                            |
-| RS   | Serbia                            |
-| TL   | East Timor                        |
-| RE   | Reunion                           |
-| TM   | Turkmenistan                      |
-| TJ   | Tajikistan                        |
-| RO   | Romania                           |
-| TK   | Tokelau                           |
-| GW   | Guinea-Bissau                     |
-| GU   | Guam                              |
-| GT   | Guatemala                         |
-| GS   | South Georgia and the South Sandwich Islands |
-| GR   | Greece                            |
-| GQ   | Equatorial Guinea                 |
-| GP   | Guadeloupe                         |
-| JP   | Japan                             |
-| GY   | Guyana                            |
-| GG   | Guernsey                           |
-| GF   | French Guiana                     |
-| GE   | Georgia                           |
-| GD   | Grenada                           |
-| GB   | United Kingdom                    |
-| GA   | Gabon                             |
-| SV   | El Salvador                       |
-| GN   | Guinea                            |
-| GM   | Gambia                            |
-| GL   | Greenland                         |
-| GI   | Gibraltar                          |
-| GH   | Ghana                             |
-| OM   | Oman                              |
-| TN   | Tunisia                            |
-| JO   | Jordan                            |
-| HR   | Croatia                           |
-| HT   | Haiti                             |
-| HU   | Hungary                           |
-| HK   | Hong Kong                          |
-| HN   | Honduras                          |
-| HM   | Heard Island and McDonald Islands  |
-| VE   | Venezuela                          |
-| PR   | Puerto Rico                        |
-| PS   | Palestinian Territory              |
-| PW   | Palau                             |
-| PT   | Portugal                           |
-| SJ   | Svalbard and Jan Mayen            |
-| PY   | Paraguay                           |
-| IQ   | Iraq                              |
-| PA   | Panama                            |
-| PF   | French Polynesia                   |
-| PG   | Papua New Guinea                   |
-| PE   | Peru                              |
-| PK   | Pakistan                           |
-| PH   | Philippines                        |
-| PN   | Pitcairn                           |
-| PL   | Poland                            |
-| PM   | Saint Pierre and Miquelon         |
-| ZM   | Zambia                            |
-| EH   | Western Sahara                     |
-| EE   | Estonia                           |
-| EG   | Egypt                             |
-| ZA   | South Africa                       |
-| EC   | Ecuador                            |
-| IT   | Italy                              |
-| VN   | Vietnam                            |
-| SB   | Solomon Islands                    |
-| ET   | Ethiopia                           |
-| SO   | Somalia                            |
-| ZW   | Zimbabwe                           |
-| SA   | Saudi Arabia                       |
-| ES   | Spain                              |
-| ER   | Eritrea                            |
-| ME   | Montenegro                         |
-| MD   | Moldova                            |
-| MG   | Madagascar                         |
-| MF   | Saint Martin                       |
-| MA   | Morocco                            |
-| MC   | Monaco                             |
-| UZ   | Uzbekistan                         |
-| MM   | Myanmar                            |
-| ML   | Mali                               |
-| MO   | Macao                              |
-| MN   | Mongolia                           |
-| MH   | Marshall Islands                   |
-| MK   | Macedonia                          |
-| MU   | Mauritius                          |
-| MT   | Malta                              |
-| MW   | Malawi                             |
-| MV   | Maldives                           |
-| MQ   | Martinique                         |
-| MP   | Northern Mariana Islands           |
-| MS   | Montserrat                         |
-| MR   | Mauritania
+<table>
+    <tr>
+        <td>Code</td>
+        <td>Country</td>
+    </tr>
+    <tr>
+        <td>BD</td>
+        <td>Bangladesh</td>
+    </tr>
+    <tr>
+        <td>BE</td>
+        <td>Belgium</td>
+    </tr>
+    <tr>
+        <td>BF</td>
+        <td>Burkina Faso</td>
+    </tr>
+    <tr>
+        <td>BG</td>
+        <td>Bulgaria</td>
+    </tr>
+    <tr>
+        <td>BA</td>
+        <td>Bosnia and Herzegovina</td>
+    </tr>
+    <tr>
+        <td>BB</td>
+        <td>Barbados</td>
+    </tr>
+    <tr>
+        <td>WF</td>
+        <td>Wallis and Futuna</td>
+    </tr>
+    <tr>
+        <td>BL</td>
+        <td>Saint Barthelemy</td>
+    </tr>
+    <tr>
+        <td>BM</td>
+        <td>Bermuda</td>
+    </tr>
+    <tr>
+        <td>BN</td>
+        <td>Brunei</td>
+    </tr>
+    <tr>
+        <td>BO</td>
+        <td>Bolivia</td>
+    </tr>
+    <tr>
+        <td>BH</td>
+        <td>Bahrain</td>
+    </tr>
+    <tr>
+        <td>BI</td>
+        <td>Burundi</td>
+    </tr>
+    <tr>
+        <td>BJ</td>
+        <td>Benin</td>
+    </tr>
+    <tr>
+        <td>BT</td>
+        <td>Bhutan</td>
+    </tr>
+    <tr>
+        <td>JM</td>
+        <td>Jamaica</td>
+    </tr>
+    <tr>
+        <td>BV</td>
+        <td>Bouvet Island</td>
+    </tr>
+    <tr>
+        <td>BW</td>
+        <td>Botswana</td>
+    </tr>
+    <tr>
+        <td>WS</td>
+        <td>Samoa</td>
+    </tr>
+    <tr>
+        <td>BQ</td>
+        <td>Bonaire, Saint Eustatius and Saba</td>
+    </tr>
+    <tr>
+        <td>BR</td>
+        <td>Brazil</td>
+    </tr>
+    <tr>
+        <td>BS</td>
+        <td>Bahamas</td>
+    </tr>
+    <tr>
+        <td>JE</td>
+        <td>Jersey</td>
+    </tr>
+    <tr>
+        <td>BY</td>
+        <td>Belarus</td>
+    </tr>
+    <tr>
+        <td>BZ</td>
+        <td>Belize</td>
+    </tr>
+    <tr>
+        <td>RU</td>
+        <td>Russia</td>
+    </tr>
+    <tr>
+        <td>RW</td>
+        <td>Rwanda</td>
+    </tr>
+    <tr>
+        <td>RS</td>
+        <td>Serbia</td>
+    </tr>
+    <tr>
+        <td>TL</td>
+        <td>East Timor</td>
+    </tr>
+    <tr>
+        <td>RE</td>
+        <td>Reunion</td>
+    </tr>
+    <tr>
+        <td>TM</td>
+        <td>Turkmenistan</td>
+    </tr>
+    <tr>
+        <td>TJ</td>
+        <td>Tajikistan</td>
+    </tr>
+    <tr>
+        <td>RO</td>
+        <td>Romania</td>
+    </tr>
+    <tr>
+        <td>TK</td>
+        <td>Tokelau</td>
+    </tr>
+    <tr>
+        <td>GW</td>
+        <td>Guinea-Bissau</td>
+    </tr>
+    <tr>
+        <td>GU</td>
+        <td>Guam</td>
+    </tr>
+    <tr>
+        <td>GT</td>
+        <td>Guatemala</td>
+    </tr>
+    <tr>
+        <td>GS</td>
+        <td>South Georgia and the South Sandwich Islands</td>
+    </tr>
+    <tr>
+        <td>GR</td>
+        <td>Greece</td>
+    </tr>
+    <tr>
+        <td>GQ</td>
+        <td>Equatorial Guinea</td>
+    </tr>
+    <tr>
+        <td>GP</td>
+        <td>Guadeloupe</td>
+    </tr>
+    <tr>
+        <td>JP</td>
+        <td>Japan</td>
+    </tr>
+    <tr>
+        <td>GY</td>
+        <td>Guyana</td>
+    </tr>
+    <tr>
+        <td>GG</td>
+        <td>Guernsey</td>
+    </tr>
+    <tr>
+        <td>GF</td>
+        <td>French Guiana</td>
+    </tr>
+    <tr>
+        <td>GE</td>
+        <td>Georgia</td>
+    </tr>
+    <tr>
+        <td>GD</td>
+        <td>Grenada</td>
+    </tr>
+    <tr>
+        <td>GB</td>
+        <td>United Kingdom</td>
+    </tr>
+    <tr>
+        <td>GA</td>
+        <td>Gabon</td>
+    </tr>
+    <tr>
+        <td>SV</td>
+        <td>El Salvador</td>
+    </tr>
+    <tr>
+        <td>GN</td>
+        <td>Guinea</td>
+    </tr>
+    <tr>
+        <td>GM</td>
+        <td>Gambia</td>
+    </tr>
+    <tr>
+        <td>GL</td>
+        <td>Greenland</td>
+    </tr>
+    <tr>
+        <td>GI</td>
+        <td>Gibraltar</td>
+    </tr>
+    <tr>
+        <td>GH</td>
+        <td>Ghana</td>
+    </tr>
+    <tr>
+        <td>OM</td>
+        <td>Oman</td>
+    </tr>
+    <tr>
+        <td>TN</td>
+        <td>Tunisia</td>
+    </tr>
+    <tr>
+        <td>JO</td>
+        <td>Jordan</td>
+    </tr>
+    <tr>
+        <td>HR</td>
+        <td>Croatia</td>
+    </tr>
+    <tr>
+        <td>HT</td>
+        <td>Haiti</td>
+    </tr>
+    <tr>
+        <td>HU</td>
+        <td>Hungary</td>
+    </tr>
+    <tr>
+        <td>HK</td>
+        <td>Hong Kong</td>
+    </tr>
+    <tr>
+        <td>HN</td>
+        <td>Honduras</td>
+    </tr>
+    <tr>
+        <td>HM</td>
+        <td>Heard Island and McDonald Islands</td>
+    </tr>
+    <tr>
+        <td>VE</td>
+        <td>Venezuela</td>
+    </tr>
+    <tr>
+        <td>PR</td>
+        <td>Puerto Rico</td>
+    </tr>
+    <tr>
+        <td>PS</td>
+        <td>Palestinian Territory</td>
+    </tr>
+    <tr>
+        <td>PW</td>
+        <td>Palau</td>
+    </tr>
+    <tr>
+        <td>PT</td>
+        <td>Portugal</td>
+    </tr>
+    <tr>
+        <td>SJ</td>
+        <td>Svalbard and Jan Mayen</td>
+    </tr>
+    <tr>
+        <td>PY</td>
+        <td>Paraguay</td>
+    </tr>
+    <tr>
+        <td>IQ</td>
+        <td>Iraq</td>
+    </tr>
+    <tr>
+        <td>PA</td>
+        <td>Panama</td>
+    </tr>
+    <tr>
+        <td>PF</td>
+        <td>French Polynesia</td>
+    </tr>
+    <tr>
+        <td>PG</td>
+        <td>Papua New Guinea</td>
+    </tr>
+    <tr>
+        <td>PE</td>
+        <td>Peru</td>
+    </tr>
+    <tr>
+        <td>PK</td>
+        <td>Pakistan</td>
+    </tr>
+    <tr>
+        <td>PH</td>
+        <td>Philippines</td>
+    </tr>
+    <tr>
+        <td>PN</td>
+        <td>Pitcairn</td>
+    </tr>
+    <tr>
+        <td>PL</td>
+        <td>Poland</td>
+    </tr>
+    <tr>
+        <td>PM</td>
+        <td>Saint Pierre and Miquelon</td>
+    </tr>
+    <tr>
+        <td>ZM</td>
+        <td>Zambia</td>
+    </tr>
+    <tr>
+        <td>EH</td>
+        <td>Western Sahara</td>
+    </tr>
+    <tr>
+        <td>EE</td>
+        <td>Estonia</td>
+    </tr>
+    <tr>
+        <td>EG</td>
+        <td>Egypt</td>
+    </tr>
+    <tr>
+        <td>ZA</td>
+        <td>South Africa</td>
+    </tr>
+    <tr>
+        <td>EC</td>
+        <td>Ecuador</td>
+    </tr>
+    <tr>
+        <td>IT</td>
+        <td>Italy</td>
+    </tr>
+    <tr>
+        <td>VN</td>
+        <td>Vietnam</td>
+    </tr>
+    <tr>
+        <td>SB</td>
+        <td>Solomon Islands</td>
+    </tr>
+    <tr>
+        <td>ET</td>
+        <td>Ethiopia</td>
+    </tr>
+    <tr>
+        <td>SO</td>
+        <td>Somalia</td>
+    </tr>
+    <tr>
+        <td>ZW</td>
+        <td>Zimbabwe</td>
+    </tr>
+    <tr>
+        <td>SA</td>
+        <td>Saudi Arabia</td>
+    </tr>
+    <tr>
+        <td>ES</td>
+        <td>Spain</td>
+    </tr>
+    <tr>
+        <td>ER</td>
+        <td>Eritrea</td>
+    </tr>
+    <tr>
+        <td>ME</td>
+        <td>Montenegro</td>
+    </tr>
+    <tr>
+        <td>MD</td>
+        <td>Moldova</td>
+    </tr>
+    <tr>
+        <td>MG</td>
+        <td>Madagascar</td>
+    </tr>
+    <tr>
+        <td>MF</td>
+        <td>Saint Martin</td>
+    </tr>
+    <tr>
+        <td>MA</td>
+        <td>Morocco</td>
+    </tr>
+    <tr>
+        <td>MC</td>
+        <td>Monaco</td>
+    </tr>
+    <tr>
+        <td>UZ</td>
+        <td>Uzbekistan</td>
+    </tr>
+    <tr>
+        <td>MM</td>
+        <td>Myanmar</td>
+    </tr>
+    <tr>
+        <td>ML</td>
+        <td>Mali</td>
+    </tr>
+    <tr>
+        <td>MO</td>
+        <td>Macao</td>
+    </tr>
+    <tr>
+        <td>MN</td>
+        <td>Mongolia</td>
+    </tr>
+    <tr>
+        <td>MH</td>
+        <td>Marshall Islands</td>
+    </tr>
+    <tr>
+        <td>MK</td>
+        <td>Macedonia</td>
+    </tr>
+    <tr>
+        <td>MU</td>
+        <td>Mauritius</td>
+    </tr>
+    <tr>
+        <td>MT</td>
+        <td>Malta</td>
+    </tr>
+    <tr>
+        <td>MW</td>
+        <td>Malawi</td>
+    </tr>
+    <tr>
+        <td>MV</td>
+        <td>Maldives</td>
+    </tr>
+    <tr>
+        <td>MQ</td>
+        <td>Martinique</td>
+    </tr>
+    <tr>
+        <td>MP</td>
+        <td>Northern Mariana Islands</td>
+    </tr>
+    <tr>
+        <td>MS</td>
+        <td>Montserrat</td>
+    </tr>
+    <tr>
+        <td>MR</td>
+        <td>Mauritania</td>
+    </tr>
+</table>
