@@ -1,0 +1,51 @@
+---
+title: "Calendar Sync Option explained"
+description: "The updated sync option found in the Settings->Profile page afte integrating the Google account."
+---
+
+
+## For Group calendar
+
+We updated it so that the sync option will be found in the Settings->Profile page after you integrate the Google account. You will need to log in as the user and go to the Settings -> Integrations page to connect with the Google account. After that is done, you can connect to the Google account under the Profile tab in the Calendar Configuration section.
+
+For the sync option here, it would be the same idea as what we had before. Allow contact creation means that we will create a contact + appointment in Monstro for the guests we found in the Google events.
+
+If you don't want us to create a contact, you can choose "**Select Default Calendar**" and click save.
+
+After you select the default calendar, the Allow Trigger option will show up and that means if you want the appointment triggers or Customer booked appointment trigger to fire for the contact we created to add the lead to the appointment reminder campaigns.
+
+![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48098784224/original/mvSbY_fxdNHCBuNUeETgGsVjjJCDFBq4Cw.png?1618603086)
+  
+## For unassigned calendar
+
+[Video Placeholder]
+
+#### All Monstro appointments will still be pushed to the linked Google calendar no matter what the sync option is.
+
+#### The behavior for two-way sync and disable trigger would pull the guests in the Google events and add them to Monstro.
+
+####   
+
+#### Smart sync would pull the guests in the Google events and add them to Monstro if we found that they are already a lead with the same email in Monstro.
+
+## Calendar Sync Options:
+
+#### **One way**:
+
+All events from Google Calendar will be shown in grey. It will not add whoever is invited to the Google event to Monstro. But will still sync the Appointments from to the Google calendar and block the timeslot pulled from Google.
+
+#### **Two way**:
+
+All events from Google Calendar will be colored and will talk to each other. Monstro will find who is invited to the Google event, create a contact record for them, and fire off any triggers associated with the calendar.
+
+#### **Smart**:
+
+When an event is created in Google Calendar but the contacts associated with the event  **were not found**  to already exist in Monstro as contacts, Monstro  **will not**  add them as contacts but will block the time off in your Monstro calendar (event color will be gray).
+
+###   
+
+Alternatively, when an event is created in Google Calendar and the contacts associated with the event  **were found**  as existing contacts in Monstro, Monstro will color code the event and fire off any triggers associated with the calendar.
+
+#### **Disable Trigger**:
+
+All Google Calendar event contacts will be pulled into Monstro as new contacts, but no triggers associated with the Monstro calendar will fire.
