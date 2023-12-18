@@ -1,0 +1,97 @@
+---
+title: "SMS Not Sending / Delivering to Contacts"
+description: "This will explore all the possible reasons why an SMS sending or delivery might fail and provide corresponding troubleshooting steps."
+---
+# SMS Not Sending / Delivering to Contacts 
+
+Troubleshooting SMS delivery failures can be stressful. In this help doc, we will explore all the possible reasons why an SMS sending or delivery might fail and provide corresponding troubleshooting steps.
+
+## How does SMS delivery work?
+
+When an SMS is sent from the Monstro platform, it goes through various steps that can be illustrated as follows:
+
+![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/155001390704/original/gwuD0SeXygdW4us2dRbDWyU4SWLVAbg26Q.jpg?1687260143)
+
+As you may have noticed, an SMS that you send to a contact goes through multiple layers. If there is a failed sending or delivery, it could indicate an error or filter at any of the mentioned layers.
+
+## Where can I find Sending/Delivery errors in Monstro?
+
+In most cases, when an SMS fails to send or deliver, we display an error in the conversation view that appears like this:
+
+![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/155001398625/original/IHal9IeKAVI9LHTb1psfIXU-Mj1o7Fz3cw.png?1687264519)
+
+The error message and error code will provide you with clues about what is going wrong and how to proceed from there.
+
+# Possible reasons for failure include:  
+
+## At the Monstro layer:
+
+### 1. DND is enabled
+
+When DND is enabled for a contact on the SMS channel or overall, Monstro doesn't send the SMS and displays an error in the conversation screen.
+
+### 2. The number is a landline number (Number validation)
+
+When number validation is enabled, Monstro checks if the contact's phone number is SMS-capable before attempting to send the SMS. If the number is not SMS-capable, Monstro skips sending the SMS and shows an error in the conversations screen.
+
+### 3. Sub-Account is new and undergoing ramped sending
+
+For newly created sub-accounts, Monstro gradually increases the sending limits to prevent spamming or phishing. Agencies can choose to remove these restrictions if desired.
+
+### 4. Sub-Account has exhausted the daily quota set by the agency
+
+Agencies can set a daily limit on SMS sending for each sub-account. When the limit is reached, Monstro skips sending SMS in bulk actions and automation. However, 1:1 SMS messages are still sent to allow clients to reply to their leads. Agencies have control over these limits for each sub-account.
+
+### 5. Sub-account SMS sending privileges have been suspended due to a high error rate, opt-out rate, or carrier complaint rate
+
+Monstro monitors error rates, opt-out rates, and carrier complaint rates for all sub-accounts to prevent spamming and phishing. If any of these thresholds are exceeded, SMS sending privileges for the sub-account are suspended for a certain period. Any attempted SMS sending during this time will be skipped, and an error message will be displayed on the conversation screen.
+
+## At the Twilio/LC Phone Layer:
+
+  
+
+### 1. The number is on Twilio's DND list due to a previous opt-out or carrier complaint.
+
+If the contact's number opted out from the Twilio number before, SMS will not be delivered unless the contact opted in by texting START to the Twilio number.
+
+### 2. 30001 - Queue overflow
+
+Twilio queues messages based on the sending rate of the sender or account. Messages can only be queued for up to 4 hours before they automatically fail. The queue length limit can be reduced by setting a lower Validity Period within your Messaging Service settings or API requests.
+
+### 3. 30002 - Sub-Account suspended on the Twilio side
+
+If your Twilio sub-account is suspended between the time of message sent and delivery, please contact Twilio or Monstro Support (LC Phone). This failure occurs when your account is suspended after the message was queued but before it was sent by Twilio.
+
+## At Sender Carrier Network Layer
+
+### 1. 30003 - Unreachable destination handset
+
+-   The destination handset you are trying to reach is switched off or otherwise unavailable.
+-   The device you are trying to reach does not have sufficient signal
+-   The device cannot receive SMS (for example, the phone number belongs to a landline)
+-   There is an issue with the mobile carrier
+
+### 2. 30004 - Message blocked
+
+-   The destination number you are trying to reach is blocked from receiving this message.
+-   The device you are trying to reach does not have sufficient signal.
+-   The device cannot receive SMS (for example, the phone number belongs to a landline).
+-   The destination number is on India's national Do Not Call registry.
+-   There is an issue with the mobile carrier.
+-   You have sent a message from a US/CA Toll-free number to an end-user handset that has previously responded with "STOP" or another opt-out keyword.
+
+### 3.  The attachment file size exceeded
+
+### 4.  Geo permission issues
+
+5. The body **exceeds the limit of 1600 characters**
+
+-   **If you are using a trigger to send an SMS. Check the body of the message. Also, check to see if there is a custom value of {{message.body}}**  
+    -   **For example, if someone replies via email and their email exceeds the limit of 1600 characters, the message will not be sent if you have the custom value {{message. body}}**
+    -   ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48068091296/original/wUVrqsO1VOTGBDM2HeSLYYsiAsUY9OitDg.png?1604348154)
+
+## FAQs:
+
+### Why am I being charged for SMS messages that failed to deliver?
+
+Charges will apply to SMS messages where delivery was attempted.
