@@ -1,0 +1,28 @@
+---
+title: "Why Are My Emails Going To Spam?"
+description: "The common issue is sending from a public domain (e.g., gmail.com, yahoo.com). Ensure you send emails from a domain you own to avoid this, matching your branding."
+---
+# Why Are My Emails Going To Spam? 
+
+## There are many reasons that mailbox providers could flag your email as spam.
+
+Here are the most common reasons we see and how to fix them!
+
+**Sending From a Public Domain**
+If you are sending messages from a free domain like gmail.com, yahoo.com, etc., your messages will likely go to the spam folder. You'll want to be sure to send mail from a domain that you own and that matches your branding.
+
+**DMARC** 
+If the domain you use to send mail has a DMARC policy but you haven't verified the domain in with your SMTP provider, your messages will likely go to spam. Check with your SMTP provider for instructions on how to ensure your Monstro messages pass DMARC.
+
+**List Health & List Collection**
+If all of the technical pieces above are covered, list health and list collection are the next most important factors to determine deliverability. Be sure that:
+
+-   Everyone on your list gave direct consent to receive email marketing from you
+-   Your cold subscribers are cleaned from your list regularly
+-   Your forms are secured with double opt-in
+
+**Sending Internal Mail**
+  
+Are you sending messages to the same domain that the message is coming from? For example, sending from info@exampledomain.com to suan@exampledomain.com. If so, it's common for these internal messages to go to spam. This is because your mailbox sees that it's receiving a message from itself, but it knows that it didn't send the message (Monstro did). This makes your mailbox think it's being spoofed, and it sends the message to spam. 
+
+If you're just sending internal mail to test your messages, we recommend using a free email like gmail.com. If you need to send mail internally outside of testing, you'll want to have the person who manages mail for your domain whitelist the IP address of your SMTP provider.

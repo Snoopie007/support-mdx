@@ -1,0 +1,78 @@
+---
+title: "How to send a test email in the Conversation"
+description: "To send a test email in the Conversation, create a test contact by switching to the agency view, then select the desired subaccount."
+---
+# How to send a test email in the Conversation 
+
+## Creating a test contact
+
+Click on  **Click here to switch**  on the top left once you are in the agency view
+
+Click the subaccount you want to test in
+
+Click on  **Contacts**
+
+![](https://i.ibb.co/zNV0S4V/2023-1-24-11-50-37.gif)
+
+Click on  **Add Contact**
+
+[Image Placeholder https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48188156134/original/SaQ-cCnrTXfi1o4tIon7v0Ujent0ZG7eEw.png?1644343472]
+  
+Fill out the First name and email and click Save
+
+![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48188156256/original/Ndu-D6s5V60eU7X7FZn4qtOr8EvbZMFSKQ.png?1644343506)
+ 
+## Sending the test email
+
+It should automatically redirect you to the conversation page, click **Send Email** below
+
+![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48188156572/original/yzPLNGRd664AKnruJpRp3KPCmDjdziPJRA.png?1644343559)
+
+## Configuring the sender's email
+
+The highlighted part is where we can configure the sender's email address.  By default, it will show the user logged in as the sender's email address.
+
+[Image Placeholder https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48188162868/original/6cUmkRkvFnPbkuAQNKW7Gp9RC1az0KrQng.png?1644345005]
+
+### If you are using Mailgun
+
+If I mask the sender email like testing@gmail.com, the reply-to address will show as testing@replies.subdomain.com, which is the Mailgun subdomain we set up for the sub-account in agency Settings-> Email Services > Location Settings. Replies will still appear correctly in the Monstro sub-account's Conversation tab.
+
+For e.g. my Mailgun subdomain is subdomain.monstro.com so the reply-to email address will show kate@subdomain.monstro.com
+
+[Image Placeholder https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48188163232/original/mDpnT7mOKzYgEF0BWOE4cj3VzEci-DC7Jg.png?1644345109]
+
+We can set  [testing@subdomain.com](mailto:testing@subdomain.com)  as the sender's email address to enhance email deliverability as the reply-to address domain will match the sender's email address.
+
+You can also set up cold inbound email to capture any emails going to emails ending with @replies.subdomain.com
+
+If you are using SMTP integration
+
+Go to Sub-account **Settings**  -> Email Services
+
+Copy the highlighted email that's integrated as the SMTP and use that as the sender email in the conversation tab
+
+![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48283730097/original/KE3Wxli8wEXikutAlAAxosnWL15gY7GK8Q.png?1677268384)
+
+Depending on what the SMTP integration you are using, you could set up an alias/verify sender to send from other emails
+
+-  Setting up an alias for Google SMTP
+
+-  Setting up an alias for Zoho SMTP
+
+-  [Verifying sender email with Sendgrid](https://docs.sendgrid.com/ui/sending-email/senders)
+
+## Troubleshooting email delivery
+
+Once you send the email and if you are not able to receive it, be sure to check the spam folder. 
+
+For the error that we display in the Conversation view, we will fetch the error we got from the Mailgun API/ SMTP server and display it. If you click on the error icon to view the full error message, it should provide details on why the email is not able to be sent. 
+
+If the error is not helpful, please open a support ticket with the SMTP provider so they can provide the delivery status on that email.
+
+
+If you are using Mailgun, you can check the Mailgun logs and check out our email not sending help doc
+
+## If email replies are not coming back
+
+Once you receive the email, you can reply to the email and see if the reply will show up in the Conversation tab. If not, please check what you can do When email replies are not coming back to the Conversation).

@@ -1,0 +1,227 @@
+---
+title: "A2P 10DLC Campaign Approval Best Practices"
+description: "This change is relevant to customers using long code numbers to send messages to the United States under the A2P 10DLC framework."
+---
+# A2P 10DLC Campaign Approval Best Practices 
+
+On January 26, 2023, a new A2P 10DLC Campaign vetting process came into effect.  This change is relevant to customers using long code numbers to send messages to the United States under the A2P 10DLC framework. This change does not apply to Toll-Free messaging.
+
+Effective January 26, 2023, newly registered A2P Campaigns are subject to a manual vetting process.  **To help ensure your Campaigns are approved in this vetting process, please follow these best practices when submitting new Campaigns.**
+
+## Approved campaign example
+
+Campaign Information
+
+1.  Description
+    1.  This campaign sends appointment confirmations, message notifications, and offers for chiropractic adjustments to existing patients or new patients who have opted in to receive SMS notifications. The communications are sent via in-person POS, website forms, or web chat.
+        1.  The Campaign use case description section is used to describe the purpose of this campaign. Add a line to indicate if The campaign is related to a financial services organization, which helps with DIRECT LENDING
+        2.  
+2.  Sending messages with embedded links?
+    1.  Yes
+3.  Sending messages with embedded phone numbers?
+    1.  Yes
+4.  Message Sample #1
+    1.  David, it's Kate from ABC Company. Thanks for opting in to receive SMS notifications. I just saved a time for you on Thursday, June 15, 2023, at 4:00 PM, and I'll see you then! If anything changes, just let me know. If you need to opt-out, reply STOP.
+        1.  include an **Introduction** of yourself/company) and **Opt Out language** (reply STOP to unsubscribe.)
+            
+5.  Message Sample #2
+    1.  David, it's Kate from ABC Company. Thanks for opting in to receive messages. Today, we are giving out a few vouchers to our past patients for a free chiropractic adjustment. Would you like one? If you need to opt out, reply STOP.
+        -   Sometimes, A2P campaigns are **rejected due to users including custom fields or values**. It's important to note that this practice is strongly discouraged. Avoid this: "Hey {{name}}! Samuel from [write the client's company name here] here. We remember you had signed up to receive an appointment with us a little while back. When could we get you rescheduled? Reply STOP to opt out."  
+            
+6.  How do end-users consent to receive messages?  
+    1.  End users opt-in through an appointment form on the website: **https://www.abccompany.com/appointment**, Users check a box  with optional consent language  to receive messages from us to provide their consent at the end of the appointment form:  [https://storage.googleapis.com/msgsndr/RNTEDRA9ap9xSh2MyTYS/media/65271336fe7786badd88b169.png](https://storage.googleapis.com/msgsndr/RNTEDRA9ap9xSh2MyTYS/media/65271336fe7786badd88b169.png)
+        1.  The opt-in information must be described in the message flow description. Make sure to **include the link to the website opt-in page**. The website needs to have a privacy policy and an optional checkbox for message consent. If the checkbox is showing at the end of the survey, or behind an appointment form. Please supply a hosted link to an image of the opt-in
+            
+7.  Opt-in Message
+    1.  You have successfully opted in for messages from  ABC Company. Reply STOP to unsubscribe.
+8.  Opt-in Keywords?
+    1.  Subscribe, Start
+        1.  Opt-In Keywords should be **alphanumeric or accented characters**. The use of spaces between keywords, such as 'I Agree' and 'Sign UP,' is not permitted. However, one-word keywords are acceptable. Suitable options include **Subscribe, Start, Y, Yes, Confirm, and Register**.
+            
+9.  Opt-out Message:
+    1.  You have successfully been unsubscribed. You will not receive any more messages from this number. Reply START to resubscribe.
+10.  Opt-out Keywords: CANCEL, END, QUIT, UNSUBSCRIBE, STOP, STOPALL
+11.  Help Message: Reply STOP to unsubscribe. Msg&Data Rates May Apply.
+12.  Help Keywords: HELP, INFO
+
+## Forbidden use cases will result in Campaign rejection.
+
+Make sure your A2P Campaign does not involve prohibited content such as cannabis, hate speech, etc., and that your use case is compliant with the  Messaging Policy. 
+
+## Opt-In Guidelines
+
+We checked the rejected campaign and found that the opt-in description lacks details, e.g., End users opt-in by contacting us via telephone, email, chat, messenger, etc.
+
+More information than that must be provided to know what the end user will see since it has not been possible to test how the Opt-in works.
+
+As per our carrier requirements, opt-in should follow the following guidelines.
+
+### Website opt-in:
+
+Please verify that opt-in meets  **CITA guidelines**. All methods of opt-in need to be listed. If opt-in is collected through a  **paper form or behind a login**, please provide a  **hosted link to an image of opt-in**. If opt-in occurs on a website,  **please provide a link to the website**. The website needs to have a privacy policy and terms of service. Ensure opt-in is not shared with 3rd parties. If the privacy policy for this business states that your customer shares user data to and from third parties. Please note this is against our policy. "Consent is only to be obtained from the individual consumer and not on behalf of another individual. Opt-in data and consent may never be shared, sold, or bought." You might get error 30007 when sending an SMS.
+
+On the website form, Clearly state that submitting their phone number allows them to receive messages from your company. Include a checkbox for clients to indicate their agreement.  **Participation in text promotions should never be a requirement.** If your customer forces users to enter a phone number and check the box to consent to promotional text messages to move forward, you might receive Error 30007 for the SMS delivery. SMS opt-in must be optional.
+
+### For the checkbox consent, You can type something like this as an example:
+
+I agree to receive marketing messaging from COMPANY_NAME at the phone number provided above. I understand I will receive 2 messages a month, data rates may apply, reply STOP to opt-out
+
+Example:
+
+![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/155007217685/original/5100uZZRPuRMJT2c4qEoOUQWdI0d0FLdkQ.png?1694201684)
+
+**Website Posting (Support)**: Prominently display the phone number on your website so customers can find it and use it to opt-in for messaging. This can be done through support pages, contact sections, or call-to-action buttons. Make it clear that customers can use the provided phone number to opt in and receive messages.
+
+**Keyword or QR Code** **Opt-In**: Use specific keywords or QR codes that customers can use to opt-in for messaging. Communicate the keyword or display the QR code in ads, social media posts, or physical materials. Instruct customers to text the keyword or scan the QR code to opt in.
+
+**Please Note:**
+>Please provide photos or screenshots for verification, showing where customers can find the keyword or QR code to opt-in.
+
+## Ensure data accuracy and consistency.
+
+Make sure you submit Campaign registrations with accurate and consistent data:
+
+| Best Practice | Examples |
+|--|--|
+| Consistency in  **brand**,  **website,**  and  **sample messages** | If your brand name is  **Acme**, your website is  [**www.acme.com**](http://www.acme.com/), but your sample messages say, “Here’s your one-time passcode for logging into  [**www.contoso.com**](http://www.contoso.xn--com-9o0a/),” your campaign will be  **rejected.** |
+| Consistency in  **sample messages**  and  **use cases** | If you register a  **marketing**  campaign but sample messages say, “Here’s your  **one-time passcode**: 123456”, your campaign will be rejected. |
+|Consistency in  **email** **domain**  and  **company name**|Your campaign will be rejected if you register a brand as LeadConnector Inc but provide an email address with the Gmail domain name. *Note that this check  **only applies to large, well-known corporations that should have dedicated email domains**|
+| Make sure you submit  **real, working websites.** | Indicating that your customers opt-in to your messages via the website, but providing a website address that does not work, will lead to campaign rejection. |
+| Make sure the brand you register is the  **actual brand that you’re sending messages for** | If ISV customers register a brand with your company’s information (e.g., a company that  **provides the tech for dental offices**) but end up sending messages for your customers (e.g.,  **individual dentist practices**), your campaign will be rejected. |
+|Make sure you create  **as few duplicative brands and campaigns as possible**|**Excessive**  brands with the  **same EIN and excessive campaigns**  with the same campaign attributes may be seen as  **high-risk**  and may result in campaign rejection|
+| If you wish to send templated messages, please  **indicate the templated fields in sample messages with brackets**  to help reviewers better identify which parts are templated. | For example, please write, “Dental check due for  **[Mary Doe]**, Visit  **[[www.contoso.com](http://www.contoso.com/)]**  to schedule an appointment or call  **[123-456-7890]”** |
+
+## Ensure your use case involves consumer consent before sending messages
+
+Make sure you collect consumer consent appropriately. Please refer to the  [CTIA guidelines](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)  for detailed instructions and best practices on handling consumer consent.
+  
+| Best Practice | Examples |
+|--|--|
+| Make sure consumer opt-in is collected appropriately | If you indicate you collect opt-in via text messages, but your sample messages say,  **“**Hi, is this the owner of 123 Oak Street? I’d like to discuss how I can help you sell your property”**, it is clear that you  **have not collected appropriate consent**  before sending messages and your campaign will be rejected. |
+| Make sure  **opt-in language**  is available on your website if you indicated in the “message flow” field that a consumer opts into your campaign on your company website. | If your brand Acme uses its website,  [www.acme.com](http://www.acme.com/), to collect phone numbers but your website does not contain opt-in language such as  **“By providing your phone number, you agree to receive text messages from ACME. Message and data rates may apply. Message frequency varies.”**, your campaign will be rejected. |
+|We recommend having  **opt-out language**  in at least one of your sample messages.|For example, please add language such as **“Please reply STOP to opt-out”**  in one of your sample messages.|
+
+**Please note:**
+>The ecosystem constantly improves the vetting criteria as it comes across additional violations. Please do not consider the best practices listed above as a “catch-all” and guarantee approval as long as you follow them all; instead, consider them as a baseline that illustrates the general direction of compliant, high-quality messaging that the ecosystem is moving towards.
+
+# FAQs:
+
+## How to check the reasons why my campaigns are rejected?
+
+We've introduced some new updates from our developers. Now, you can also view rejection reasons directly in the UI. Once you are in the Trust Center tab, click on "Failed" to review the **Campaign Failure Reason.** All failed/rejected campaigns will now display their specific failure reasons.
+  ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/155006647935/original/qGC801ynKNy8x5Hqs5U-GcQkFjS5shMAiQ.png?1693595439)
+
+## Campaign Failure Reasons
+
+### MESSAGE_FLOW: The campaign submission has been reviewed and it was rejected because of provided Opt-in information.
+
+**Approved example:**
+
+End users opt-in by visiting - https://brandname.com/contact_us and filling in their details on the survey Users check a box to receive messages from us to provide their consent at the end of the survey:  https://storage.googleapis.com/msgsndr/xxxxxxxxx.png](https://storage.googleapis.com/msgsndr/xxxxxxxxx.png)**
+
+You can upload the screenshot of the opt-in to the Media file inside the sub-account, Make sure the link goes straight to the form with an optional consent checkbox. If the checkbox is showing at the end of the survey, or behind an appointment form. Please supply a hosted link to an image of the opt-in
+
+**Possible Causes**
+
+1. Opt-in message workflow does not meet the requirements for the specific campaign type.
+
+2. Consent is required but not adequately provided or maintained.
+
+3. Opt-in information is shared with third-party entities.
+
+**Possible Solutions**
+
+1. Ensure compliance with Twilio Messaging Policy relating to opt-in
+
+2. Detail All Opt-in Methods: **Include all methods of opt-in, whether electronic, paper form, in-person verbal opt-in, or other means.**
+
+3. Provide Necessary Links and Documentation: If opt-in is collected through a paper form or behind a login,  **supply a hosted link to an image of the opt-in**. If the opt-in occurs on a website, provide the relevant link.
+
+4. Include  **Privacy Policy and Terms of Service**: The website where opt-in occurs must contain a privacy policy and terms of service.
+
+5.  **Avoid Third-Party Sharing**: Make sure that opt-in information is not shared with unauthorized third parties.
+
+6. Ensure Opt-in is Verifiable: Each campaign is manually reviewed and needs to be verifiable by a human.
+
+Please resubmit the campaign with the following guides in mind.
+
+-   For this question  **How do end-users consent to receive messages?**
+    -   It's extremely important for us to include the  **actual link to the website form**  that your leads are opting in
+    -   An approved sample will be:
+        -   End users opt-in through a form on the website:  https://www.abccompany.com/contact-us, via the website chat widget, and also through our POS system at our office, with consent language similar to that on our website.
+        -   The link https://www.abccompany.com/contact-us should contain a checkbox so leads can actively opt-in, where clients can enter their phone numbers and agree to receive messages. Clearly state that submitting their phone number allows them to receive messages from your company. Include a checkbox for clients to indicate their agreement.
+        -   If the link is going to a survey and the  **checkbox is on the last step of the survey**, please  **provide a hosted link to an image of the opt-in.**
+-   You can type something like this as an example:
+    -   I agree to receive marketing messaging from COMPANY_NAME at the phone number provided above. I understand I will receive 2 messages a month, data rates may apply, reply STOP to opt-out
+-   Example:
+  ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/155007970329/original/8YRe8LVa4Ezi7xuGWVJabABvjcfDEI497Q.png?1695081543)
+
+### USE_CASE_DESCRIPTION: The campaign submission has been reviewed and it was rejected because of an unverifiable website.
+
+-   Campaign vetting rejection - Invalid Website URL
+    -   The campaign submission has been reviewed and it was rejected because of an unverifiable website.
+
+-   Possible Causes
+    -   An **invalid URL** was provided during the registration process.
+    -   The website associated with the campaign is  **not functioning or inaccessible.**
+    -   **Opt-in flow** **is not found**  on website provided.
+    -   Lack of proper indication in the campaign description if the registration pertains to a pre-launch website.
+-   Possible Solutions
+    -   Verify that the provided website(s) are functioning correctly, and accessible.
+    -   If the registration is for a pre-launch website, instead include a publically accessible URL to view a screenshot of the SMS opt-in flow that will appear.
+    -   If opt-in occurs on the website, provide the direct link in the Message Flow field.
+    -   If opt-in is collected through a paper form or behind a login,  **supply a hosted link to an image of the opt-in**. If the opt-in occurs on a website, provide the relevant link.
+-   Once you have made a change to address the issue, please resubmit the campaign for review.
+
+![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/155006648067/original/_-DQfTaszfS5i_U1-1AlWmdcCL48EoCuFw.png?1693595810)
+
+### USE_CASE_DESCRIPTION: The campaign for a Sole Proprietorship Brand has been rejected due to incorrect registration and failure to meet the small business Sole Proprietor (EIN) criteria set by TCR and mobile carriers.
+
+Campaign rejection - Incorrect Sole Prop Brand Registration
+
+The campaign for a Sole Proprietorship Brand has been rejected due to incorrect registration and failure to meet the small business Sole Proprietor (EIN) criteria set by TCR and mobile carriers.
+
+**Possible Causes**
+
+Reasons for this failure can be:
+
+-   Failure to meet the specified criteria for Sole Proprietor registration, entities with EINs should be registered as a Standard Brand.
+-   Incorrect or incomplete registration information provided during the brand registration process.
+-   Inconsistencies or discrepancies in the provided information.
+
+**Possible Solutions**
+
+-   Verify the accuracy and completeness of the registration information for the Sole Proprietorship Brand.
+-   Ensure that the brand meets the criteria defined by TCR and mobile carriers for Sole Proprietor (EIN) registration.
+-   If the brand does not qualify as a Sole Proprietorship, consider registering it as a standard brand according to the appropriate guidelines and requirements.
+-   Register a standard or acceptable campaign use case that aligns with the registered brand's classification.
+
+In conclusion, the first question is, does the business have an EIN? For DBAs, you must use the business name and address in the EIN registry number that you use.
+  
+![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/155006648071/original/gAUjTKqcWiNam4HvHQwHKiQk3MV-_oTV9Q.png?1693595818)
+
+### USE_CASE_DESCRIPTION: The campaign submission has been reviewed and it was rejected because of an unknown reason.
+
+**Possible Causes**
+
+The campaign cannot be approved because of an unknown error and may stem from an issue raised by other vetting parties in the ecosystem.
+
+**Possible Solutions**
+
+Our Support team has the means to obtain more detailed information about this specific error. Please contact Customer Support for assistance in understanding the underlying problem and finding a resolution.
+
+### USE_CASE_DESCRIPTION: The campaign submission has been reviewed and rejected due to inconsistencies between the sample message and the intended use case of the campaign.
+
+**Possible Causes**
+
+-   Sample messages are missing, unclear, or their content does not match the campaign's use-case.
+-   Invalid content within the sample messages.
+
+**Possible Solutions**
+
+-   Verify that the sample messages are accurate, detailed, and reflective of the actual messages to be sent under the campaign.
+-   Indicate templated fields within sample messages using brackets.
+-   At least one of the sample messages should include your business name and opt-out message.
+-   Ensure at least two sample messages are provided.
+-   Ensure that the use case and campaign description align with each other.
+-   Once you have made a change to address the issue, please resubmit the campaign for review.
