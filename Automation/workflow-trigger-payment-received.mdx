@@ -1,6 +1,6 @@
 ---
 title: "Workflow Trigger - Payment received"
-description: "The Payment Received trigger is designed to act as a centralized mechanism for capturing all incoming payments across the CRM, including one-time purchases, subscription charges, invoices, and more."
+description: "The Payment Received trigger is designed to act as a centralized mechanism for capturing all incoming payments across the CRM."
 ---
 
 The Payment Received trigger is designed to act as a centralized mechanism for capturing all incoming payments across the CRM, including one-time purchases, subscription charges, invoices, and more. It can be customized with filters, such as source type and transaction status, to target specific use cases. This trigger helps businesses automate tasks, streamline processes, and efficiently respond to real-time customer transactions.
@@ -56,7 +56,7 @@ Benefits: By efficiently handling trial period transactions, businesses can enha
 Benefits: Utilizing Text2Pay links with the Payment Received trigger allows businesses to reach a wider audience, expedite payment processing, and simplify customer communication, ultimately leading to increased revenue and customer loyalty.
 
 **How to use the Payment Received Trigger?**
-[Video Placeholder https://www.loom.com/share/9775a0183c974473a87060eb410d39fb?sid=65280ce2-1c81-4f3f-b11f-a53d5ced9ef4]
+[Video Placeholder]
   
 Inside a workflow, add a workflow trigger called  **Payment Received.**
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48294607854/original/NEpU4MrSK-AuNJon1IMs032agtQ4d-U6Vw.png?1682522580)
@@ -68,21 +68,112 @@ Inside a workflow, add a workflow trigger called  **Payment Received.**
 **for Payment Received Workflow Trigger**
 
 You can  then make your Workflow trigger more specific using filters. Here is a table of all the available filters and sub-filters.
-
-|Trigger | Filter | Options at Filter Level | Sub-Filter Level 1 | Options at Sub-Filter Level 1 | Operators |
-
-| Payment Received | Payment Source | Invoice | Sub-Source | Text2Pay link | is, is not |
-																									  | One-time invoice|
-																									  | Recurring template |
-						| Funnel/ Website |		| Sub-Source | 			  |One-step order form |
-																									  | Two-step order form | 
-																									  | Upsell|
-														| Transaction type | 	  |Customer present/first transaction|
-																		| Customer not present/subscription transaction|
-					   | Calendar |						| Calendar | 				| Calendar names |
-			| Global Product | Global product Names | Price | Prices names as per selected Global Product
-			| Payment status | Success |
-										  | Failed |
+<table>
+    <tr>
+        <td>Trigger</td>
+        <td>Filter</td>
+        <td>Options at Filter Level</td>
+        <td>Sub-Filter Level 1</td>
+        <td>Options at Sub-Filter Level 1</td>
+        <td>Operators</td>
+    </tr>
+    <tr>
+        <td>Payment Received</td>
+        <td>Payment Source</td>
+        <td>Invoice</td>
+        <td>Sub-Source</td>
+        <td>Text2Pay link</td>
+        <td>is, is not</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>One-time invoice</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Recurring template</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Funnel/ Website</td>
+        <td></td>
+        <td>Sub-Source</td>
+        <td></td>
+        <td>One-step order form</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Two-step order form</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Upsell</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Transaction type</td>
+        <td></td>
+        <td>Customer present/first transaction</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Customer not present/subscription transaction</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Calendar</td>
+        <td></td>
+        <td>Calendar</td>
+        <td></td>
+        <td>Calendar names</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Global Product</td>
+        <td>Global product Names</td>
+        <td>Price</td>
+        <td>Prices names as per selected Global Product</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Payment status</td>
+        <td>Success</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Failed</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
 
 ### If/Else Conditions for Payment Received Workflow Trigger
 
@@ -94,52 +185,260 @@ Once you have added your desired set of Filters and Sub-Filters to your workflow
 
 This Table explains the possible If/Else Conditions and their branches.
 
-| If/Else Option | Action | Operator | Options |
-| Payment | Product | is, is not | Global product Names |
-				  | Funnel/Website |   | Funnel/Website names | 
-				  | Calendar |			|    | Calendar names |
-				  | Source |				|	 | Invoice, Funnel, Website, Calendar | 
-				  | Payment status| 	 | success/failed | 
-				  | Amount | Equal to, is not equal to, Greater than, Greater than or equal to, Less than, Less than or equal to, is not empty, is empty.| Amount paid |
-
+<table>
+    <tr>
+        <td>If/Else Option</td>
+        <td>Action</td>
+        <td>Operator</td>
+        <td>Options</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Payment</td>
+        <td>Product</td>
+        <td>is, is not</td>
+        <td>Global product Names</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Funnel/Website</td>
+        <td></td>
+        <td>Funnel/Website names</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Calendar</td>
+        <td></td>
+        <td></td>
+        <td>Calendar names</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Source</td>
+        <td></td>
+        <td></td>
+        <td>Invoice, Funnel, Website, Calendar</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Payment status</td>
+        <td></td>
+        <td>success/failed</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Amount</td>
+        <td>Equal to, is not equal to, Greater than, Greater than or equal to, Less than, Less than or equal to, is not empty, is empty.</td>
+        <td>Amount paid</td>
+        <td></td>
+    </tr>
+</table>
 ### Custom Values for Payment Received Workflow Trigger
 
 When you use the Payment Received Workflow trigger, you have access to a set of Custom Values that you can populate within SMS, Emails, Internal Notifications, etc. This Table explains the custom values in detail.
-
- |  Custom Values Category | Custom Values  Name (Custom Value Group Name) | Custom Values within Group | Value |
-
-| **Payment** | Source | | {{payment.source}} |
-						 | Currency Symbol | {{payment.currency_symbol}} |
-						 | Currency Code | {{payment.currency_code}} |
-						 | **Customer** (Custom Values Group) | ID | {{payment.customer.id}} |
-																		| First Name | {{payment.customer.first_name}} |
-																		| Last Name | {{payment.customer.last_name}} |
-																		| Name | {{payment.customer.name}} |
-																		| Email | {{payment.customer.email}} |
-																		| Phone | {{payment.customer.phone}} |
-																		| Full Address | {{payment.customer.address}} |
-																		| City | {{payment.customer.city}} |
-																		| State | {{payment.customer.state}} |
-																		| Country | {{payment.customer.country}} |
-																		| Postal Code | {{payment.customer.postal_code}} |
-		  | **Invoice** (Custom Values Group) |  Name | {{payment.invoice.name}} |
-																		| Number | {{payment.invoice.number}} |
-																		| Issue Date | {{payment.invoice.issue_date}} | 
-																		| Due Date | {{payment.invoice.due_date}} |
-																		| URL | {{payment.invoice.url}} |
-																		| Recorded By | {{payment.invoice.recorded_by}} | 
-		| Sub-Total | {{payment.sub_total_amount}} |
-		| Discount Amount | {{payment.discount_amount}}
-		| Coupon Code | {{payment.coupon_code}} | 
-		| Tax Amount | {{payment.tax_amount}} | 
-		| Created On | {{payment.created_on}} |
-		| Total Amount | {{payment.total_amount}} |
-		| Transaction ID | {{payment.transaction_id}} | 
-		| Status | {{payment.payment_status}} |
-		| Gateway | {{payment.gateway}} |
-		| Card Last 4 Digits | {{payment.card.last4}} | 
-		| Card Brand | {{payment.card.brand}} |
-		| Method | {{payment.method}} |
+<table>
+    <tr>
+        <td>Custom Values Category</td>
+        <td>Custom Values  Name (Custom Value Group Name)</td>
+        <td>Custom Values within Group</td>
+        <td>Value</td>
+    </tr>
+    <tr>
+        <td>**Payment**</td>
+        <td>Source</td>
+        <td></td>
+        <td>[[payment.source]]</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Currency Symbol</td>
+        <td>[[payment.currency_symbol]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Currency Code</td>
+        <td>[[payment.currency_code]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>**Customer** (Custom Values Group)</td>
+        <td>ID</td>
+        <td>[[payment.customer.id]]</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>First Name</td>
+        <td>[[payment.customer.first_name]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Last Name</td>
+        <td>[[payment.customer.last_name]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Name</td>
+        <td>[[payment.customer.name]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Email</td>
+        <td>[[payment.customer.email]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Phone</td>
+        <td>[[payment.customer.phone]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Full Address</td>
+        <td>[[payment.customer.address]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>City</td>
+        <td>[[payment.customer.city]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>State</td>
+        <td>[[payment.customer.state]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Country</td>
+        <td>[[payment.customer.country]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Postal Code</td>
+        <td>[[payment.customer.postal_code]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>**Invoice** (Custom Values Group)</td>
+        <td>Name</td>
+        <td>[[payment.invoice.name]]</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Number</td>
+        <td>[[payment.invoice.number]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Issue Date</td>
+        <td>[[payment.invoice.issue_date]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Due Date</td>
+        <td>[[payment.invoice.due_date]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>URL</td>
+        <td>[[payment.invoice.url]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Recorded By</td>
+        <td>[[payment.invoice.recorded_by]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Sub-Total</td>
+        <td>[[payment.sub_total_amount]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Discount Amount</td>
+        <td>[[payment.discount_amount]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Coupon Code</td>
+        <td>[[payment.coupon_code]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Tax Amount</td>
+        <td>[[payment.tax_amount]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Created On</td>
+        <td>[[payment.created_on]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Total Amount</td>
+        <td>[[payment.total_amount]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Transaction ID</td>
+        <td>[[payment.transaction_id]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Status</td>
+        <td>[[payment.payment_status]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Gateway</td>
+        <td>[[payment.gateway]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Card Last 4 Digits</td>
+        <td>[[payment.card.last4]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Card Brand</td>
+        <td>[[payment.card.brand]]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Method</td>
+        <td>[[payment.method]]</td>
+        <td></td>
+    </tr>
+</table>
 
 ## FAQs
 
