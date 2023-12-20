@@ -1,10 +1,12 @@
+
 ---
 title: "How to fix links in the email that do not open?"
 description: "Fix non-opening links in your email by updating them. The links currently lead to email.mg.yourdomain.com, Mailgun's subdomain for tracking statistics."
----
-# How to fix links in the email that do not open? 
 
-[Video Placeholder https://www.loom.com/share/eab0d287dcbf4334ade625b8b5606551?sid=a48dc55b-77f0-4800-87c0-edb2f024ae7a]
+---
+## How to fix links in the email that do not open? 
+
+[Video Placeholder]
 
 When we open the links sent from Monstro, it's going to email.mg.yourdomain.com, which is the Mailgun subdomain you set up for the location. It is because we need to change the links in the email for tracking statistics.
 
@@ -59,13 +61,13 @@ c. Send the email test again from Monstro
 
 Here's  [How to Enable HTTPS Tracking Links](https://help.mailgun.com/hc/en-us/articles/360011566033-How-to-Enable-HTTPS-Tracking-Links)
 
-5. If the info above does not help, please get in touch with the support team  of your domain provider for assistance. You can show them we need to add these records here:
+5. If the info above does not help, please get in touch with the support team of your domain provider for assistance. You can show them we need to add these records here:
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/155004540974/original/s0puwTTcRlben7UZfFvZrWTBtd9wUhOz9w.png?1691198730)
 
 6. If the domain provider verified all DNS records are good to go, please reach out to HL support.
 
-## Common issues:
+### Common issues:
 
 1. If The CNAME record includes the root domain, it will not work here: 
 
@@ -82,8 +84,10 @@ replies.companyname.com The host name will be  **email.replies**
 support.companyname.com The host name will be  **email.support**
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48201410168/original/ovadh-goMeGpiYqisajhrsT40lnNsl-IPA.png?1647278164)
+
 How to fix links in the email that do not open?
-[Video Placeholder https://www.loom.com/share/eab0d287dcbf4334ade625b8b5606551?sid=a48dc55b-77f0-4800-87c0-edb2f024ae7a]
+
+[Video Placeholder]
 
 When we open the links sent from Monstro, it’s going to email.mg.yourdomain.com, which is the Mailgun subdomain you set up for the location. It is because we need to change the links in the email for tracking statistics.
 
@@ -92,8 +96,6 @@ The Cname record you added when you set up in the domain provider is essential f
 The record for email.mg.yourdomain.com should be pointing to Mailgun.org, that’s how they can fetch data and show the email stats.
 
 If you are seeing this error when clicking the link: This site can’t be reached/says email.mg.yourdomain.com refused to connect when you have your own Mailgun domain/subdomain set up
-
-
 
 That means the CNAME record might not be set up properly.
 
@@ -118,8 +120,6 @@ You will look up the cname record for email.support.companyname.com
 
 MX toolbox:
 
-
-
 If it says DNS records not found:
 a. login to your domain provider
 b. Go to DNS records and check the CNAME record
@@ -129,16 +129,12 @@ a. Go to Mailgun -> Click the Sending tab on the left -> Domain Settings
 b. Edit the Tracking Protocol
 c. Send the email test again from Monstro
 
-
-
-
-
 Here’s How to Enable HTTPS Tracking Links
 
 If the info above does not help, please get in touch with the support team of your domain provider for assistance. You can show them we need to add these records here:
 
-
 If the domain provider verified all DNS records are good to go, please reach out to HL support.
+
 Common issues:
 If The CNAME record includes the root domain, it will not work here:
 If you are using GoDaddy or Namecheap, be sure to omit the root domain from the record so it is email.mg only
@@ -147,12 +143,8 @@ Hostname:
 
 Depending on the subdomain you are trying to set up, if you are trying to set up
 
-mg.companyname.com The host name will be email.mg
+mg.companyname.com The hostname will be email.mg
 
-replies.companyname.com The host name will be email.replies
+replies.companyname.com The hostname will be email.replies
 
-support.companyname.com The host name will be email.support
-
-
-
-Markdown 4186 bytes 423 words 81 lines Ln 36, Col 142HTML 2100 characters 409 words 36 paragraphs
+support.companyname.com The hostname will be email.support

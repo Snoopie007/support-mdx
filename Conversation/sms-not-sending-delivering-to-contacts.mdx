@@ -1,6 +1,8 @@
+
 ---
 title: "SMS Not Sending Delivering to Contacts"
 description: "This will explore all the possible reasons why an SMS sending or delivery might fail and provide corresponding troubleshooting steps."
+
 ---
 
 Troubleshooting SMS delivery failures can be stressful. In this help doc, we will explore all the possible reasons why an SMS sending or delivery might fail and provide corresponding troubleshooting steps.
@@ -47,8 +49,6 @@ Monstro monitors error rates, opt-out rates, and carrier complaint rates for all
 
 ## At the Twilio/LC Phone Layer:
 
-  
-
 ### 1. The number is on Twilio's DND list due to a previous opt-out or carrier complaint.
 
 If the contact's number opted out from the Twilio number before, SMS will not be delivered unless the contact opted in by texting START to the Twilio number.
@@ -83,7 +83,7 @@ If your Twilio sub-account is suspended between the time of message sent and del
 
 ### 4.  Geo permission issues
 
-5. The body **exceeds the limit of 1600 characters**
+5. The body *exceeds the limit of 1600 characters*
 
 -   If you are using a trigger to send an SMS. Check the body of the message. Also, check to see if there is a custom value of [message.body]  
 -   For example, if someone replies via email and their email exceeds the limit of 1600 characters, the message will not be sent if you have the custom value [message. body]

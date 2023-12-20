@@ -1,16 +1,18 @@
+
 ---
 title: "Auto Payments in Recurring Templates"
 description: "Streamline billing with automatic deduction from your customer's credit card on the due date, ensuring timely payments without waiting for customer action."
+
 ---
+## Auto Payments in Recurring Templates 
 
 Introducing Auto Payments in Recurring Templates: A Streamlined Solution for Billing
 
 Managing customer payments can be a daunting task, especially when it comes to recurring invoices. But worry no more! With the auto payment feature in our recurring templates, you can ensure timely payments without the hassle of waiting for your customers to take action.
 
 This innovative feature allows you to automatically deduct the invoice amount from your customer's credit card on the due date.
-  
 
-## What does auto payment in a recurring template mean?
+### What does auto payment in a recurring template mean?
 
 Auto payments in recurring templates mean you don't have to wait for the customer to pay your invoice on time. The setting automatically deducts the invoice amount on the due date using the customer's credit card.
 
@@ -22,18 +24,18 @@ The card which must be used to deduct the auto payments on the invoice due date 
     
 -   New Card - Locations can also enter new card details to charge the customer on that specific card whenever an invoice is due in the recurring template
 
-## How to automatically charge the client?
+### How to automatically charge the client?
 
 -   Auto payments can be enabled on the recurring template while scheduling the template, as shown below.     
   ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48242859063/original/ITni0cQc1eUZ7DTw2wRWO4Yaa7guwqmH3g.png?1659534278)
 
-## What does Customer Card mean here?
+### What does Customer Card mean here?
   
 This option allows location users to charge the end customer from the card the customer uses to make the first payment in the recurring template. This will become applicable from the immediate next occurrence of the invoice irrespective of the invoice which is paid (can be the first, second, or n-th invoice)
 
 For reference, if the customer makes the payment for the first time on the 4th invoice without paying the first three invoices, then auto-payment using that card would start from the 5th occurrence of the recurring template(if it exists)  
 
-## How will I get notified of auto payments? 
+### How will I get notified of auto payments? 
 
 -   Notification will be sent to the location user and the end customer upon every success/failure instance of a child invoice in the recurring template.
 -   The end customer will also be notified before deducting the charge automatically. This notification will be sent "x" days in advance, defined in the recurring setting frequency.
@@ -49,24 +51,24 @@ For reference, if the customer makes the payment for the first time on the 4th i
 | Auto-payment information | Receiver |
 |Child invoice updated |Receiver|
 
-## What happens if auto-payment fails?
+### What happens if auto-payment fails?
 
 -   In case of auto-payment failure from the defined card, the end customer and invoice sender would be notified via mail.
 -   Suppose the end customer successfully pays via the same card or a new card upon notification. In that case, the new card will be updated to deduct auto-payment for all future occurrences.
     
--   Else the payment would be retried two more times, after 24-hour gap of each try, for attempting to process the payment for the invoice. If the payment has not been processed, no further attempt would be made for this instance automatically, and the customer would be required to pay the invoice manually.
+-   Else the payment would be retried two more times, after a 24-hour gap of each try, for attempting to process the payment for the invoice. If the payment has not been processed, no further attempt would be made for this instance automatically, and the customer would be required to pay the invoice manually.
 
-## How many times will payment be retried in case of failure?
+### How many times will payment be retried in case of failure?
 
 In case of failure in deducting the charge automatically from the defined card, two auto retry attempts would be made after 24 hours each from the first failure. If the payment is still not processed, the end customer must pay manually for the invoice.to pay for the invoice manually
 
-## What does automatically charging a saved card mean?
+### What does automatically charging a saved card mean?
 
 This option allows location users to charge the end customer using one of the saved cards with the location user. Starting from the first occurrence, this would deduct the invoice amount from the selected saved card starting from the first occurrence.
 
 Any failure to charge the amount from the saved card would notify the location user and the end customer. The saved card is not authorized while scheduling the template.
 
-## What does automatically charging a new card mean?
+### What does automatically charging a new card mean?
 
 This option allows location users to charge the end customer using new card details entered by the location user. Starting from the first occurrence, this would deduct the invoice amount from the desired card.
 
@@ -74,7 +76,7 @@ Any failure to charge the amount from the selected card would notify the locatio
 
 Any card successfully added will also be saved for future purposes for the location user.
 
-## How to end auto-payments on a recurring template?
+### How to end auto-payments on a recurring template?
 
 Auto-payments can be ended on an ongoing recurring template by selecting the Manage Auto-payments option from the invoice builder, as shown below.
 
@@ -84,7 +86,7 @@ This will open the Auto-payment scheduling modal with the toggle turned ON and t
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48245831218/original/1D6-aru93aKFHnuedU4CVieJX5PT17utCA.png?1660737284)
   
-Can I turn on auto payments in an ongoing recurring template?
+***Can I turn on auto payments in an ongoing recurring template?***
 
 Yes, auto-payments can be turned ON on an ongoing recurring template using the manage auto-payments option in the builder.
 

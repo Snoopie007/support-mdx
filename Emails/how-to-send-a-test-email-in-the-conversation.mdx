@@ -1,10 +1,12 @@
+
 ---
 title: "How to send a test email in the Conversation"
 description: "To send a test email in the Conversation, create a test contact by switching to the agency view, then select the desired subaccount."
----
-# How to send a test email in the Conversation 
 
-## Creating a test contact
+---
+## How to send a test email in the Conversation 
+
+### Creating a test contact
 
 Click on  **Click here to switch**  on the top left once you are in the agency view
 
@@ -22,13 +24,13 @@ Fill out the First name and email and click Save
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48188156256/original/Ndu-D6s5V60eU7X7FZn4qtOr8EvbZMFSKQ.png?1644343506)
  
-## Sending the test email
+### Sending the test email
 
 It should automatically redirect you to the conversation page, click **Send Email** below
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48188156572/original/yzPLNGRd664AKnruJpRp3KPCmDjdziPJRA.png?1644343559)
 
-## Configuring the sender's email
+### Configuring the sender's email
 
 The highlighted part is where we can configure the sender's email address.  By default, it will show the user logged in as the sender's email address.
 
@@ -38,7 +40,7 @@ The highlighted part is where we can configure the sender's email address.  By d
 
 If I mask the sender email like testing@gmail.com, the reply-to address will show as testing@replies.subdomain.com, which is the Mailgun subdomain we set up for the sub-account in agency Settings-> Email Services > Location Settings. Replies will still appear correctly in the Monstro sub-account's Conversation tab.
 
-For e.g. my Mailgun subdomain is subdomain.monstro.com so the reply-to email address will show kate@subdomain.monstro.com
+E.g. my Mailgun subdomain is subdomain.monstro.com so the reply-to email address will show kate@subdomain.monstro.com
 
 [Image Placeholder https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48188163232/original/mDpnT7mOKzYgEF0BWOE4cj3VzEci-DC7Jg.png?1644345109]
 
@@ -62,7 +64,7 @@ Depending on what the SMTP integration you are using, you could set up an alias/
 
 -  [Verifying sender email with Sendgrid](https://docs.sendgrid.com/ui/sending-email/senders)
 
-## Troubleshooting email delivery
+### Troubleshooting email delivery
 
 Once you send the email and if you are not able to receive it, be sure to check the spam folder. 
 
@@ -73,6 +75,6 @@ If the error is not helpful, please open a support ticket with the SMTP provider
 
 If you are using Mailgun, you can check the Mailgun logs and check out our email not sending help doc
 
-## If email replies are not coming back
+### If email replies are not coming back
 
 Once you receive the email, you can reply to the email and see if the reply will show up in the Conversation tab. If not, please check what you can do When email replies are not coming back to the Conversation).

@@ -1,0 +1,62 @@
+---
+title: "What is the file size limit of an attachment to an SMS or an Email?"
+description: "This is to impose file size limits to ensure deliverability and prevent server overload, considering the vast user base relying on their services for SMS and Emails worldwide."
+---
+## What is the file size limit of an attachment to an SMS or an Email? 
+
+SMS carriers and Email Providers have attachment file size limitations to prevent deliverability issues and to make sure that their servers are not overloaded with hefty file sizes while millions of people around the world use their services to send SMS and Emails.  
+
+### SMS
+
+To send attachments, your Twilio phone number should be  [](https://support.twilio.com/hc/en-us/articles/223182808-How-to-check-if-a-Twilio-number-can-send-MMS-messages)[MMS enabled.](https://support.twilio.com/hc/en-us/articles/223133447-Not-Receiving-Incoming-SMS-and-MMS-Messages-on-Twilio-Phone-Number)[](https://support.twilio.com/hc/en-us/articles/223182808-How-to-check-if-a-Twilio-number-can-send-MMS-messages)  We support up to 10 attachments, as long as the total size of the message body text and all attachments is less than 5 MB.
+
+Carriers also have limits. The  average is 300kb-600kb and can go up to 3.5MB for tier 1 providers (AT&T/Verizon, etc.)
+  
+Here are the Carrier Attachment Size limits for some common US Carriers:  
+![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48256121979/original/vVM7u7IHx_Gn4Qk0kCu2q9ULx8nDEGBXsA.png?1665515526)
+  
+The file sizes above will generally be passed along to the wireless carriers. However, due to differences in handsets, file types, and transcoding, we recommend you send attachments no larger than 500KB to ensure the best chance of delivery.
+
+These image file types are supported:
+
+-   **jpeg**
+-   **png**
+-   **gif**
+
+**Please Note:**
+>As of May 2021, there is an issue with Toll-Free MMS file size support; for these numbers, you must ensure that any attachments (including images) are 600kb or smaller.
+
+More information:
+
+[https://support.twilio.com/hc/en-us/articles/360018832773-Twilio-Programmable-SMS-Supported-File-Types-and-Size-Limits-for-MMS-Media-Messages](https://support.twilio.com/hc/en-us/articles/360018832773-Twilio-Programmable-SMS-Supported-File-Types-and-Size-Limits-for-MMS-Media-Messages)
+
+### Email
+
+Mainly for security reasons, all email server providers limit the maximum email size that an email account can receive. Otherwise, if there were no maximum email size limit, the email server would risk being bombarded with very large emails, causing it to cease working properly.
+
+Some free email address providers also enforce commercial limitations on the email size: the free account gets a low maximum email size limit, but you can increase the maximum limit by upgrading to a paid account.
+
+If you send an email that exceeds the maximum email size limit of the recipient’s email provider, your email will bounce off and you will receive an email error back in your Conversations tab. Usually, you will receive one of the following error messages:
+
+-   “Attachment size exceeds the allowable limit”;
+-   “552: Message size exceeds maximum permitted”;
+-   “System Undeliverable, message size exceeds outgoing message size limit”;
+-   “The size of the message you are trying to send exceeds the global size limit of the server. The message was not sent; reduce the message size and try again”.
+
+[Mailgun supports maximum messages size of 25MB.](https://documentation.mailgun.com/en/latest/user_manual.html)
+  
+Here are attachment sizes for different Email Providers.
+
+![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48256117003/original/022vF55Ti-O1Inl3fh68Cy0RpupW79P0uw.png?1665513507)
+
+## FAQs:
+
+### Can I send mp4 files via SMS?
+
+No, we are not able to attach mp4 files as an attachment via SMS. If you record a video in our mobile app, it will generate a link so the contact can click on it to view the video.  
+
+### Can you bypass these maximum email size limits?
+
+A simple answer would be: no, you can’t bypass these maximum size limits. However, there is a workaround:
+
+You can upload the files to be attached to cloud storage servers (like DropBox, Google Drive, or SkyDrive) and include the download link in your email.
