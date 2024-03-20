@@ -16,7 +16,7 @@ Our refund processing feature is a convenient tool integrated into our payment p
 -   Easily manage refunds for various payment providers and methods from one central platform, streamlining the refund process and reducing manual effort.    
 
 **Please Note:**
->The feature currently does not support user-specific permissions for processing refunds, but it is planned for future implementation.
+The feature currently does not support user-specific permissions for processing refunds, but it is planned for future implementation.
 
 ### What are some beneficial usage cases?
 
@@ -57,7 +57,7 @@ You can edit the pre-populated amount to anything less than the Full amount of t
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48294484543/original/Q_ZAOTpcgNHUrNjxMpt9dndeiwebjW0H2w.png?1682492274)
 
 **Please Note:**
->Anything filled out in the Notes area is for your record and appears under the Notes Column in Refund details for the individual Transaction. 
+Anything filled out in the Notes area is for your record and appears under the Notes Column in Refund details for the individual Transaction. 
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48294484586/original/Ilq1RRzeRcvcjypgQmp8aCW0r9c7TgwF4Q.png?1682492295)
 
@@ -74,35 +74,35 @@ The partial refund feature can be valuable in various usage cases:
 -   **Compensating for damaged or missing items:**  If a customer receives an order with damaged or lost items, businesses can issue a partial refund to compensate for the inconvenience and value of the affected items.
 -   **Reimbursement for shipping costs:**  In cases where a customer has experienced shipping issues or delays, businesses may issue a partial refund to cover the shipping costs as a gesture of goodwill.
 
-## FAQs
+### FAQs
 
-### Where will the refunded transactions be recorded?
+**Where will the refunded transactions be recorded?**
 
 All the successful/failed attempts to process refunds will be placed under the Transaction details page. This will help keep track of the refunded amounts within a specific transaction.
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48294485832/original/Eshvntif-pCDHApfWzfMx2ZmnriKZ2I4Qw.png?1682492675)
 
-### I am not able to process refunds with Authorize.net; it gives the error "The referenced transaction does not meet the criteria for issuing a credit"
+**I am not able to process refunds with Authorize.net; it gives the error "The referenced transaction does not meet the criteria for issuing a credit"**
 
 This is happening probably because the refund does not meet the criteria of the payment provider. Authorize.net would only allow refunding transactions after 24 hours from the transaction time. The ability to process refunds for older transactions depends on the policies of the payment provider and any specific time limitations they may have. Please refer to your payment provider's guidelines or contact their support team to clarify refunding older transactions.
 
-### Can I process multiple partial refunds for a single transaction?
+**Can I process multiple partial refunds for a single transaction?**
 
 Yes, you can process multiple partial refunds for a single transaction if the cumulative refund amount does not exceed the original transaction amount.
 
-### Are Google Pay and Apple Pay transactions supported for processing refunds?
+**Are Google Pay and Apple Pay transactions supported for processing refunds?**
 
 Yes, Google Pay and Apple Pay transactions and card payments can be refunded from the platform. This will refund the amount to the bank account associated with the corresponding bank account associated with the Card or Google/Apple account.
 
-### How long does it take for a refund to be reflected in a customer's account?
+**How long does it take for a refund to be reflected in a customer's account?**
 
 The time it takes for a refund to appear in a customer's account can vary depending on the payment provider and the customer's bank. Generally, the refund may take four to six business days to be reflected in the customer's account.
 
-### Is there a limit to the number of refunds I can process daily?
+**Is there a limit to the number of refunds I can process daily?**
 
 A5: There is typically no fixed limit to the number of refunds you can process daily. However, it's essential to check with your payment provider to see if they have any specific limitations or requirements for processing refunds.
 
-### Are there specific user permissions for processing refunds? I don't want to allow some of my business users to process refunds.
+**Are there specific user permissions for processing refunds? I don't want to allow some of my business users to process refunds.**
 
 As of now, user permissions are not enabled for processing refunds. The best way to identify any refunds made within a transaction is to look at the details. We have user-specific permissions on our to-do list. Businesses can filter any refunded transactions using the direct filter on the Transactions table.
 

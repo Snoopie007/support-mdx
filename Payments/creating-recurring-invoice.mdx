@@ -14,7 +14,7 @@ This article will show you how to set up and use a simple recurring invoice.
 A recurring invoice can be scheduled in advance to send automatically to your customers who bought a recurring service/product. You want to schedule the invoices once and forget it! You!  
 
 **Please Note:**
->We recommend using Stripe Connect with Invoices, in the event you do not wish to use Stripe Connect payments would need to be manually recorded.
+We recommend using Stripe Connect with Invoices, in the event you do not wish to use Stripe Connect payments would need to be manually recorded.
 
 ### How to create a recurring invoice?
 
@@ -79,15 +79,9 @@ The below table explains different cases of setting invoice frequency:
 -   This frequency setting would allow us to send an invoice to the customer on the last date of December every year, i.e., December 31
 -   Invoice scheduling will end after sending out five invoices to the customer.
   
-**Status and action types in recurring templates.**
-|**Action / Status -->**|**Draft**|**Active**| **Scheduled**|**Canceled**|**Completed**|**Edit**
-| **Edit** | Yes | No | No | No | No |
-| **View**| No | Yes | Yes | Yes | Yes |
-| **Delete** | Yes | No | Yes | No | No |
-| **End** | NA | Yes | Yes | NA | NA |
-  
+
 **Please Note:**
->**Cancelled** and **Completed** invoices can be deleted only if no invoice has been sent out to the customer. **Deleted** recurring templates are not shown in the list view.
+**Cancelled** and **Completed** invoices can be deleted only if no invoice has been sent out to the customer. **Deleted** recurring templates are not shown in the list view.
 
 ### View sent invoices and their payment status.
 
@@ -139,18 +133,18 @@ The user also has the option to end the recurring invoice from inside the invoic
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48242281204/original/NPsDsatV9n8c6_fbRfR8AK7NXu1U79iaKA.jpeg?1659355544)
 
-### Can I modify the price, discount, or taxes from the following occurrence?
+**Can I modify the price, discount, or taxes from the following occurrence?**
 
 No, you can't change the price, discount, or taxes after you have scheduled the recurring invoice.
 
 Although you can individually edit the sent-out invoice and send it over again to the customer for specific instances, there is no way to change this in automation.
 
-### Can I change the frequency setting of an ongoing recurring invoice?
+**Can I change the frequency setting of an ongoing recurring invoice?**
 
 No, you can't change the frequency settings after you have scheduled the recurring invoice.
  
 
-### Which products can I add to recurring invoices?
+**Which products can I add to recurring invoices?**
 
 Only  **one-time products  (NOT subscriptions)**  can be added to a recurring invoice. In the case of recurring products, the frequency needs to be defined inside the invoice frequency setting.  
 

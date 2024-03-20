@@ -6,7 +6,7 @@ description: "Recurring appointments are appointments or meetings that occur at 
 
 Recurring appointments are appointments or meetings that occur at regular intervals, such as every day, every week, or every month. Recurring appointments can be used in calendars to help save time and effort when scheduling regular meetings or appointments. Instead of creating a new appointment for each occurrence, a single recurring appointment can be set up to cover multiple occurrences. This can be especially useful for appointments that happen on a regular schedule, such as weekly meetings or monthly check-ins.
 
-## How can we set up a Recurring Appointments Calendar?
+### How can we set up a Recurring Appointments Calendar?
 
 Click on  **Settings**
 
@@ -25,8 +25,7 @@ Click on  **Select**  Under  **Round Robin Booking**
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48283839965/original/0KrW7PCc9NKKe0FEPyLkcKoavUMItTAPNQ.png?1677421443)
 
-**Please Note**
->All calendar types support recurring appointments. The only difference is that if you picked Round-robin, there must be a maximum of 1 user or team member on the calendar.
+**Please Note** All calendar types support recurring appointments. The only difference is that if you picked Round-robin, there must be a maximum of 1 user or team member on the calendar.
 
 In the  **Availability**  Tab, Toggle on  **Recurring Appointments**:  
 
@@ -36,8 +35,7 @@ Once you toggle on the Recurring Appointments, you can see the recurring appoint
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48283840128/original/88X8wjNcPWLFIiAF-8gZUpdcYlTmN-28Yg.png?1677421681)
 
-**Please note:**
->We have a limitation on the "times to repeat" field. An event can be repeated for a maximum of 24 times.
+**Please note:** We have a limitation on the "times to repeat" field. An event can be repeated for a maximum of 24 times.
 
 You have three options in the  **If slots are not available**  dropdown:
 
@@ -61,15 +59,14 @@ That simply means book ONLY the available slots and ignore the rest.
 
 That simply means to book the reoccurrences irrespective of how far out in the future the calendar needs to scout for the available slots.
 
-**Please Note**
->We check only until the next 3 slots for availability, if unavailable we drop the booking.If available we continue and complete all reoccurrences. User should be careful when selecting the recurring booking option (book next vs skip booking vs continue booking).
+**Please Note** We check only until the next 3 slots for availability, if unavailable we drop the booking.If available we continue and complete all reoccurrences. User should be careful when selecting the recurring booking option (book next vs skip booking vs continue booking).
 
 Recurring appointments can only be booked for standard slots (for custom slots, we do not display a recurring booking option). Users will not be able to book recurring appointments from the opportunities page. The recurring calendars will be available in the drop-down to book but only for a single time slot.
 
 
-## FAQ
+### FAQ
 
-### Will the already existing workflow trigger steps fire for Recurring appointments?
+**Will the already existing workflow trigger steps fire for Recurring appointments?**
 
 No, they won't. We have added some new filters for the Appointment Trigger steps. So all your configured triggers will need a new filter to be added for your Workflow Trigger Steps.
 
@@ -91,8 +88,7 @@ If you select this filter, then the trigger will fire only for the appointments 
 
 If you select this filter, then the trigger will fire for any type of appointment.
 
-**Please Note:**
->We are deprecating the Customer Booked Appointment Trigger. So now, if you select the Modified By Filter: 
+**Please Note:** We are deprecating the Customer Booked Appointment Trigger. So now, if you select the Modified By Filter: 
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48283841067/original/oc4eOeQBCx4TbF0am_aA-sClJBhUgf1_3g.png?1677422783)
 
@@ -102,17 +98,18 @@ If you select this filter, then the trigger will fire for any type of appointmen
 
 **API:** Works only for appointments created via API.
 
-### Can users bulk update Appointments?
+**Can users bulk update Appointments?**
 
 Users cannot bulk update Recurring appointments (cancel or reschedule).
 
-### Can the same meeting location be used for all recurring appointments?
+**Can the same meeting location be used for all recurring appointments?**
+
 If the meeting location is Zoom or Google Meet, All recurring appointments will have different meeting URLs as the system generates a dynamic meeting URL for each meeting by default.
 
-### How do the recurring events get synced over to integrated calendars?
+**How do the recurring events get synced over to integrated calendars?**
 
 If sync is turned on - events are synced as individual events with the third-party calendars.
 
-### How can payments be charged for Recurring appointments?
+**How can payments be charged for Recurring appointments?**
 
 Payments are currently unavailable for calendars with recurring turned on.

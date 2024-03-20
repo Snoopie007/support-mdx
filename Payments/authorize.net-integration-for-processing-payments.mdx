@@ -5,7 +5,7 @@ description: "Authorize.Net is considered a competitive payment processor due to
 
 Authorize.Net is considered a competitive payment processor due to its reliability, security, and wide range of features. It has operated for over 20 years, providing payment processing services to businesses of all sizes. Authorize.Net provides robust security measures to protect transactions, sensitive customer information, and reliable uptime to ensure smooth transactions. Additionally, Authorize.Net offers features such as recurring billing, mobile compatibility, and integrations with popular e-commerce platforms.,
 
-## Which Payment Processor to use?
+### Which Payment Processor to use?
 
 Deciding between Stripe, PayPal, and Authorize.net will depend on what's best for your business. Here's a comparison:
 
@@ -20,26 +20,19 @@ Ultimately, the best choice depends on the specific needs of your business, such
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48278589425/original/uuTirde8-8iEPL9WDkQhaAoDGMfz7n97AA.png?1675099374)
 
 **Please Note:**
->The data for fees is accurate as of when this article is being published, for more information please check out the Pricing pages of the three options listed:  
+The data for fees is accurate as of when this article is being published, for more information please check out the Pricing pages of the three options listed:  
 >  
 >**Stripe: [https://stripe.com/gb/pricing](https://stripe.com/gb/pricing)**  
 >**Paypal: [https://www.paypal.com/us/webapps/mpp/merchant-fees]>(https://www.paypal.com/us/webapps/mpp/merchant-fees)**  
 >**Authorize.net: [https://www.authorize.net/en-us/sign-up/pricing.html](https://www.authorize.net/en-us/sign-up/pricing.html)**
 
-## Requirements to use Authorize.Net
+### Requirements to use Authorize.Net
 
 Authorize.net can accept transactions from  [the United States, Australia, and Canadian](https://support.authorize.net/knowledgebase/Knowledgearticle/?code=000001207)  merchants.  
 Currencies supported with  [Authorize.net](http://authorize.net/)  -  [Link](https://support.authorize.net/knowledgebase/Knowledgearticle/?code=000001207)
 
 Before you can integrate  [Authorize.Net,](https://authorize.net/) you must confirm whether you are on a browser that supports using it.
 
-**Below is a list of supported and tested browsers:**
-| **Browser Name** | **Recommend Version** |
-|--|--|
-| Chrome | v80 or higher |
-| Edge (Chromium) | v85 or higher |
-|Firefox|v78 or higher|
-| Safari | v12 or higher |
 
 You can check and verify the browser and version you are using by:
 
@@ -75,7 +68,7 @@ Opera
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48278762749/original/KtjM7pJ7sGxe3bSPyQzvG-RIDVMfNuDZhQ.png?1675167724)
 
 
-## How to integrate Authorize.Net as a Payment Gateway?
+### How to integrate Authorize.Net as a Payment Gateway?
 
 1. Once you are sure you are using a supported browser and that you are operating from within one of the supported countries,  [you will need to acquire Live and Sandbox API keys from Authorize.net](https://developer.authorize.net/hello_world/common_setup_questions.html#:~:text=How%20do%20I%20obtain%20the%20transaction%20key%20for%20my%20sandbox%20account%3F)
 
@@ -110,17 +103,17 @@ Clicking on  **Confirm**  will integrate  [](https://authorize.net/)Authorize.ne
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48278807334/original/ehWEyfGMBx06EEmV6-kny_h2Mbvr-ds-zw.png?1675176320)
 
-**Please Note**
->You are not required to disconnect **Stripe** to connect to **Authorize.net**. You can connect to both gateways on the integrations page. However, since you have connected two different gateways for processing payments, you will need to define a default gateway for processing payments. **PayPal** will continue to function alongside Authorize.net/Stripe in order forms, whichever is set as the default 
+**Please Note:**
+You are not required to disconnect **Stripe** to connect to **Authorize.net**. You can connect to both gateways on the integrations page. However, since you have connected two different gateways for processing payments, you will need to define a default gateway for processing payments. **PayPal** will continue to function alongside Authorize.net/Stripe in order forms, whichever is set as the default 
 
-## Side Notes for using Authorize.Net
+### Side Notes for using Authorize.Net
 
 If Authorize.net is connected and set as the default gateway, other product areas like memberships and SAAS payment links will continue to process payments using Stripe.
 
 If there are recurring subscriptions/pending transactions with Stripe, they will continue to run as is until the Stripe connection is in place. We encourage you not to disconnect any gateway. Defining the default gateway will run new transactions through the desired choice and keep the existing subscriptions running through Stripe and PayPal integrations in place.
 
 **Please Note:**
->You need to upgrade to funnels version 2 to make use of this feature.
+You need to upgrade to funnels version 2 to make use of this feature.
 
 [Click here](https://account.authorize.net/help/Miscellaneous/FAQ/Frequently_Asked_Questions.htm)  for the link to  [](https://authorize.net/)Authorize.Net[](https://authorize.net/)'s FAQ section.
 
@@ -148,13 +141,13 @@ Expiry Date can be any future date, and any 3/4 digits value can be the CVC:
 
 38000000000006 (Diners Club/ Carte Blanche)
 
-## FAQ
+### FAQ
 
-### Why don't I see Paypal among the default gateway options?
+**Why don't I see Paypal among the default gateway options?**
 
 You can connect to Paypal and use it as a payment method alongside a credit card payment method using Stripe/Authorize.net. This means the default has to be chosen among Stripe/Authorize.net when connected. PayPal can be used independently and alongside credit card payment methods on order forms. and
 
-### What will change in the reporting of transactions done with Authorize.net? Where will I be able to keep track of all payments?
+**What will change in the reporting of transactions done with Authorize.net? Where will I be able to keep track of all payments?**
 
 There will be no change in the Orders/Subscriptions/Transactions reporting. All the payments done via Authorize.net will be available under Payments ➝ Transactions.
 
@@ -162,7 +155,7 @@ There will be no change in the Orders/Subscriptions/Transactions reporting. All 
   
 Also, there will be no change in the functioning of workflow triggers/attribution associated. All the functionalities will work the same with Authorize.net.
 
-### Where will I be able to find the subscriptions created via Authorize.net? I cannot relate to the subscription status defined on the Subscriptions page.
+Where will I be able to find the subscriptions created via Authorize.net? I cannot relate to the subscription status defined on the Subscriptions page.
 
 All subscriptions created on the order forms can be tracked under  **Payments ➝ Subscriptions**.
 
@@ -176,17 +169,6 @@ The following list represents subscription statuses and their inferences:
 **Expired** - All the subscription payments have been completed, and the subscription no longer exists
 **Canceled** - The merchant canceled the subscription using the Cancel action, and no further payments are to be processed.
 **Unpaid** - The last payment for the subscription was not paid successfully. The subscription is ongoing, but the final payment was unsuccessful. 
-
-Cancellation will be possible for the subscriptions according to the status:
-
-| **Status** | **Cancel** |
-|--|--|
-| Pending | No |
-| Trial | Yes |
-|Active| Yes |
-| Expired | No |
-| Canceled | No |
-|Unpaid | Yes |
 
 Cancel Action is provided only against those subscriptions which are created on Authorize.net. Cancellation of subscriptions for Stripe and PayPal will be added soon.
 
@@ -202,7 +184,7 @@ Cancel Action is provided only against those subscriptions which are created on 
     -   The subscription status will move to "Expired" after all the retries have been made for the last transaction.
 -   If the merchant disconnected the gateway account and there is an ongoing subscription, the transaction cannot be processed; hence the subscription will move to unpaid. The retry attempts will continue according to the retry logic.
 
-### How do I Cancel/End a subscription created via Authorize.net? I am not able to do so in the merchant portal.
+**How do I Cancel/End a subscription created via Authorize.net? I am not able to do so in the merchant portal.**
 
 Subscriptions created using Authorize.net can be canceled within the  **Subscriptions**  page using the  '**Cancel Subscription**' Action.
 
@@ -212,20 +194,17 @@ Subscriptions created using Authorize.net can be canceled within the  **Subscrip
   
 We do not create subscriptions using the Automatic Recurring Billing of Authorize.net; hence, only transaction charges corresponding to a subscription will be visible in the merchant portal. 
 
-### Will I be able to refund transactions as well within the application itself?
+**Will I be able to refund transactions as well within the application itself?**
 
 No, we do not have the refund functionality within the application. It would be best if you used the merchant portal for refunding transactions.
 
-### I am using FDS filters with Authorize.net to hold transactions for review if the address is not submitted, the card code is not submitted, etc. Is the system compatible with handling those cases?
+**I am using FDS filters with Authorize.net to hold transactions for review if the address is not submitted, the card code is not submitted, etc. Is the system compatible with handling those cases?**
 
 Yes, If you hold transactions submitted on order forms for review based on FDS filters. In that case, your transaction will be held for review (or declined as per the setting that you have configured) and will be visible in your merchant portal. Additionally, the corresponding status will be updated on the Transactions page. When you approve or decline the transaction. 
 
 Regarding recurring invoice payments/calendar appointment booking payments, we treat the transaction as declined and do not book the calendar appointment or schedule the auto payment, since it introduces complications regarding when the business owner will approve the payment.
 
-### Does Authorize.net work for membership checkouts?
+**Does Authorize.net work for membership checkouts?**
 
 Yes,  [Authorize.net](https://authorize.net/) is available for membership checkouts
 
-### When will Authorize.net be available for SaaS?
-
-Please vote on the ideas board for enabling this integration for selling SaaSallowing this integration.

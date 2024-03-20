@@ -8,22 +8,20 @@ Whether this is your first CRM or you are moving from another system, importing 
 
 Each row represents a contact record, and each information column represents a contact property (First Name, Last Name, Email Address, etc.)
 
-**Please note:**
->Having issues importing contacts?
-**Troubleshooting Bulk Imports Via CSV**
+**Please note:** Having issues importing contacts?
 
-**How to import contacts into the CRM**
+### How to import contacts into the CRM
 
 **Step 1:** Setting up your CSV and Custom Fields before importing
 
 [Video Placeholder]
 
 **Please Note:**
->- When adding a phone number that requires a "**+**" sign, please add an apostrophe at the beginning of the number, like this: **'+**191668128779 (Correct format).   
+- When adding a phone number that requires a "**+**" sign, please add an apostrophe at the beginning of the number, like this: **'+**191668128779 (Correct format).   
   
->- File Upload and Signature Fields are NOT supported when importing  
+- File Upload and Signature Fields are NOT supported when importing  
   
->- When important contacts are with a DND column within your CSV, please note that the contact will be DND for ALL the channels. If you would like to DND for specific channels, please set up a workflow first and use tags
+- When important contacts are with a DND column within your CSV, please note that the contact will be DND for ALL the channels. If you would like to DND for specific channels, please set up a workflow first and use tags
 
 **Step 2:** Check for duplicates
 
@@ -44,8 +42,7 @@ There are two methods to import contacts depending on your CSV data:
 
 [Video Placeholder]
 
-**Please Note:**
->The Add to Workflow/Campaign toggle only works for new contacts and not contacts that are being updated through the CSV file.
+**Please Note:** The Add to Workflow/Campaign toggle only works for new contacts and not contacts that are being updated through the CSV file.
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48298873724/original/Nt90wgwH7ALpy2Cb8M0ptmuCg4lknLHK7g.png?1684846151)
 
@@ -55,13 +52,13 @@ There are two methods to import contacts depending on your CSV data:
 [Video Placeholder]
   
 **Please Note:**
-> Contact ID unique identifier only shows up if you have a column header with Contact ID written as the header title.   
+Contact ID unique identifier only shows up if you have a column header with Contact ID written as the header title.   
   
-> When selecting the unique identifier (Email, Phone, or Contact ID) The system will only use the identifier selected. It will not use the phone number during the import.   
+When selecting the unique identifier (Email, Phone, or Contact ID) The system will only use the identifier selected. It will not use the phone number during the import.   
    
-> **Example:** My CSV has mixed emails and phone numbers, some contacts share emails like 
+**Example:** My CSV has mixed emails and phone numbers, some contacts share emails like 
 
-## Breaking down advanced filters:
+### Breaking down advanced filters:
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48255458121/original/9oZDb_iQBJFzMiesalfuHo4fEs1cPHqIpw.png?1665153399)
 
@@ -76,13 +73,13 @@ There are two methods to import contacts depending on your CSV data:
 
 **Please Note:**
 
-> While the **default** unique identifier is Email, our system allows you to choose fields other than Email for de-duplication purposes during the Bulk CSV Upload
+While the **default** unique identifier is Email, our system allows you to choose fields other than Email for de-duplication purposes during the Bulk CSV Upload
 
 ## Bulk Import Multiple Emails per Contact:
 
 You can leverage the power of effective contact management with our new 'Additional Emails' feature, complemented by the Bulk Import capability. Seamlessly map, manage, and maintain multiple emails for each contact, enhancing data handling. Our innovative approach simplifies large-volume data management, ensuring a streamlined and efficient process for users.
 
-[Video Placeholder https://www.loom.com/share/819f5a6be4b14286951fc1999cd52ec2?sid=7d09a86a-005d-41c4-a547-20e0c1b38bad]
+[Video Placeholder]
 
 **Conditions to import:**
 
@@ -103,7 +100,7 @@ You can leverage the power of effective contact management with our new 'Additio
 **Sample CSV**
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48298717874/original/m6t-DMVfBDU4winhtFsaWj714qwlUeYXDA.png?1684776418)
 
-## FAQ
+### FAQ
 
 **My CSV list is mixed; some contacts have an email or phone #, and some have both an email and phone. How should I proceed?**
 
@@ -117,19 +114,9 @@ Now we can find existing contacts based on the secondary field, so if the contac
 
 If a contact has multiple phone numbers or emails, please split the contacts into multiple so they will be uploaded.
 
-Example:
-
-**Original with two phone number columns:**  
-| Josephine | 810-292 9388 | 810-374-9840 | josephine_darakjy@darakjy.org
-
-Cleaned for upload version:
-
-| Josephine | 810-292-9388 | josephine_darakjy@darakjy.org
-|Josephine | 810-374-9840 |
-
 Keep the email blank for the second lead with a different phone number because it will create duplicates when we upload contacts with phone numbers as the unique field.
 
-## Important note for people that use Keap:
+### Important note for people that use Keap:
 
 The phone field from the CSV export in Keap is incompatible with GHL. The parenthesis '()' and dashes '-' make it incompatible. We have to highlight the entire column in the CSV file and ensure it is numbered in, remove any parenthesis and dashes, and then we can import without corrupting the data in the CRM.
 
@@ -156,4 +143,4 @@ As of now, We do not have any limit for CSV import for notes, and As per our cur
 
 
 **Please note:**
-> **For a detailed troubleshooting doc please see:** Troubleshooting Bulk Imports Via CSV
+**For a detailed troubleshooting doc please see:** Troubleshooting Bulk Imports Via CSV

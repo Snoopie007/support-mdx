@@ -15,7 +15,7 @@ Voicemail files (mp3 format) can be set in two different places:
 
 1) Voicemail For  **Users**  - Sub-Account >  **Settings**  >  **My Staff**  tab >  **Edit**  User > Expand  **Call & Voicemail Settings** >  **Upload mp3/wav file**
 
-[f the contact is assigned to the user or if the Twilio number is assigned to the user when they call the Twilio number and the user doesn't pick up, we will play the User voicemail here
+if the contact is assigned to the user or if the Twilio number is assigned to the user when they call the Twilio number and the user doesn't pick up, we will play the User voicemail here
 
 ![](https://i.ibb.co/n0gjtDd/2023-1-22-14-13-39.gif)
 
@@ -64,11 +64,11 @@ Second - is there a Timeout number in the phone number settings of this number? 
 Third - is there a Timeout number in the Company settings? (option 3 above)
 
 **Other Notes:**
->If a call comes into a Twilio number and a Timeout number is found but no voicemail files are found, the following default message will be played: "**We are unable to take your call right now. Please leave a message after the beep**."
+If a call comes into a Twilio number and a Timeout number is found but no voicemail files are found, the following default message will be played: "**We are unable to take your call right now. Please leave a message after the beep**."
 
 Timeout numbers are not "connected" with any particular voicemail file, e.g. a call comes into a Twilio number and Monstro detects a timeout number set in the User's settings (but that user doesn’t have a voicemail file) and Monstro finds a voicemail file in the Business Profile settings, Monstro will play the voicemail file from the  Business Profile settings after the number of seconds set in the Timeout field in the User's settings.
 
-## Troubleshooting Company Voicemail not working 
+### Troubleshooting Company Voicemail not working 
 
 **1. Check if the Twilio number is assigned to the user, and make sure the user has uploaded a voicemail file.**
 
