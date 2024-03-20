@@ -7,23 +7,20 @@ The Order Submitted trigger is a powerful new workflow trigger that allows busin
 
 ### When does the Order Submitted trigger fire?
 
-**Please Note**
->Make sure that the **Allow Multiple** Setting is toggled on in the Workflow Settings if you want it to fire off for the same contact for an Upsell, right after it fires off for them for a Primary Product's purchase.
->
->If you put in a **wait step** which holds the first instance (which came from the purchase of the primary product) of the customer in the workflow, and they go ahead and purchase the upsell, since they would still be held inside the workflow, the Upsell purchase will not let them enter the workflow a second time. Try to avoid using wait steps in this workflow, feel free to use them if you **do not plan on selling Upsells or Bumps for the same product.**
+**Please Note:** Make sure that the **Allow Multiple** Setting is toggled on in the Workflow Settings if you want it to fire off for the same contact for an Upsell, right after it fires off for them for a Primary Product's purchase.
+
+If you put in a **wait step** which holds the first instance (which came from the purchase of the primary product) of the customer in the workflow, and they go ahead and purchase the upsell, since they would still be held inside the workflow, the Upsell purchase will not let them enter the workflow a second time. Try to avoid using wait steps in this workflow, feel free to use them if you **do not plan on selling Upsells or Bumps for the same product.**
 
 [Video Placeholder ]
 
 The trigger runs upon a 1-Step or 2-Step order form submission and upsells. This trigger runs both when an order form is submitted, and again when an upsell purchase occurs; on either of these occasions it holds the product information. This means that if the end customer purchases products A and B on an order form and product C on an upsell, it will run two times (first for A and B purchase, and then for the upsell purchase)
 
-**Please note:**
->This only works with **version 2** funnels. If you are using a version 1 funnel, please upgrade to version 2 using the button shown below:
+**Please note:** This only works with **version 2** funnels. If you are using a version 1 funnel, please upgrade to version 2 using the button shown below:
+![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48271898507/original/Jt_bZs48_YpDTe855zfIKEv09u7ptooXnA.png?1672223754)
 
->![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48271898507/original/Jt_bZs48_YpDTe855zfIKEv09u7ptooXnA.png?1672223754)
->
 
 ### How is it different from the Order Form Submitted Workflow Trigger?
-[Video Placeholder https://www.loom.com/share/ce4e9483f7c7496cb8765613254bd689?sid=267183a0-c0a3-49bd-9452-5e65ca2a4aa5]
+[Video Placeholder]
 
 The following are the most significant differences between the Order Submitted and the Order Form Submitted Workflow Triggers:
 
@@ -34,8 +31,7 @@ The following are the most significant differences between the Order Submitted a
   
 -   Ability to use order-related custom values inside the workflow. This contains custom values related to customers, order details, coupon information, and payment gateway
 
-**Please Note:**
->These Custom values will **not** show up in the custom values drop-down unless the Order Submitted Trigger is one of the workflow trigger steps.
+**Please Note:** These Custom values will **not** show up in the custom values drop-down unless the Order Submitted Trigger is one of the workflow trigger steps.
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48271903161/original/GfNiNTpIzmqHoleW7RVRvGJKHUBrcM8vow.png?1672224689)
 
@@ -48,8 +44,7 @@ The following are the most significant differences between the Order Submitted a
 
 The products purchased by a client can be populated using the Shopping Cart element on an email builder template and using that specific template to send out a confirmation email to the end customer. The Shopping Cart element will auto-populate the product line items along with the purchased quantities, product images, and line item prices.
 
-**Please Note:**
->The Shopping Cart element will also populate the product images added in the Payments ➝ Products page. In case no image is added for the product, the element will populate the default image on its own. **It is highly recommended to use custom product images while making use of the shopping cart element to avoid any default system-generated images.**
+**Please Note:** The Shopping Cart element will also populate the product images added in the Payments ➝ Products page. In case no image is added for the product, the element will populate the default image on its own. **It is highly recommended to use custom product images while making use of the shopping cart element to avoid any default system-generated images.**
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48271904923/original/uMFRmaT5jF11XlibbTZhrwlAA9Slk44k0w.png?1672225164)
 
@@ -68,49 +63,3 @@ All you would need to make sure is that the  **Shopping cart**  element is added
 ### Will this trigger impact existing Order form submission triggers?
 
 No, this should not make any changes to an existing order form submission trigger. However, we recommend using the Order submitted trigger to make use of the order-related custom values along with coupon information and product line items.
-
-### What are the filter types, if/else conditions, and custom values I can use?
-
-| *Trigger** |  | **Filter** | **Operators**| **Selectable items** |
-
-|Order submission| 1 | Product | is, is not | Global product name | 
-							   | 1a | Price | is, is not | Price Name |
-							   | 2 | Order Source | is, is not | Order form | 
-							   | 2a | Submission Type | is, is not | Primary, Bump, Upsell |
-							   | 3 | Funnel | is, is not | Funnel names | 
-							   | 3a | Page | is, is not | Page inside funnel |
-							   | 3b | Product | is, is not | Funnel level products |
-							   
-| **If/Else** | **Filter** | **Operators** | **Selectable Items** |
-|  A | Order Source | is, is not | Order form |
-| B | Product | is, is not | Global product |
-| C | Payment Gateway | is, is not | Stripe, Paypal |
-| D | Order Total | Numeric operators | Numeric operators |
-| E | Submission Type | is, is not | Primary, Bump, Upsell |
-| F | Funnel | is, is not | Funnel names |
-
-| **Custom Value Category** | **Custom Value** |
-| Order 			| Currency symbol ($) |
-|			 			| Currency code (USD) |
-|			 			| Cart Total |
-|					 	| Order total |
-|			 			| Coupon code |
-|			 			| Total discount | 
-|			    		| Created on |
-|					 	| Created at |
-| 						| Order ID |
-|						| Payment Gateway |
-
-  
-| **Custom Value Category** | **Custom Value** |
-| Order>Customer	| ID |
-|			 					| First Name |
-|			 					| Last Name |
-|					 			| Name |
-|			 					| Email |
-|			 					| Phone | 
-|			    				| Full Address |
-|					 			| City |
-| 								| State |
-|								| Country |
-|								| Postal Code |

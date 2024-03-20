@@ -5,8 +5,7 @@ description: "Workflow Builder, utilize Includes or Does not include conditions,
 
 ### When using  Includes/ Does Not Include as a condition:
 
-**Please Note:**
->There are several conditional parameters in Workflow Builder where you'll have the option to specify "**Includes**" or "**Does not include**" such as Tags and other multiple-option custom fields (checkbox fields, dropdown pickers, etc.)
+**Please Note:** There are several conditional parameters in Workflow Builder where you'll have the option to specify "**Includes**" or "**Does not include**" such as Tags and other multiple-option custom fields (checkbox fields, dropdown pickers, etc.)
 
 
 **Creating an [And] condition:**
@@ -29,8 +28,7 @@ In this case, if the contact meets  ONE or both of the "Or tags" then the condit
 
 ### If/ Else Branches
 
-**Please Note:**
->If or else branches support up to 10 different outcomes per event.
+**Please Note:** If or else branches support up to 10 different outcomes per event.
  
 **What happens when two branches are both true? Will the lead go down both paths?**
 
@@ -62,13 +60,13 @@ The "Is not" operator, on the other hand, checks if the selected date unit is di
   
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48285772852/original/kCKx0qld3p_3b3nSPMEKESQphNrTsArYkg.png?1678206507)
 
-**The "Is After" Operator **
+**The "Is After" Operator**
 
 The "Is after" operator checks if the selected date unit is after the provided input. However, in the case of  **hours**, this operator only considers minutes that start on the next hour. For instance, "Current Hour Is After 6 PM" will only return true if the time is 7:00 PM onwards because 6:59 PM is still considered inside of 6 PM.  
   
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48285773967/original/ctdTUP7-6TRTnlqG6bAo06Ops_t3tZrBKA.png?1678206767)
 
-**The "Is on or After" Operator  **
+**The "Is on or After" Operator**
 
 The "Is on or after" operator checks if the selected date unit is on or after the provided input. For **hours**, this operator considers minutes from the same hour and onwards. For instance, "Current Hour Is On or After 6 PM" will return true for 6:59 PM because it is considered to be "On" at 6 PM. It will also be true for any time after 6 PM because of the  **on or After** logic in it.
 

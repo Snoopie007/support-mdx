@@ -7,10 +7,7 @@ Have you ever thought about how great it would be if contacts who meet a certain
 
 Well, now you can with the Workflow Goal Events Action. This article will cover Goal Events and how and when to use them.
 
-**Please Note:**
->For version 1, we restricted Goal Event filters to email events, adding or removing tags, trigger link clicks, and appointment status only. We plan to add more goals events in the future, such as form submissions, etc.  
->  
->Also currently we are restricting to **ONE** Goal Event per workflow.
+**Please Note:** For version 1, we restricted Goal Event filters to email events, adding or removing tags, trigger link clicks, and appointment status only. We plan to add more goals events in the future, such as form submissions, etc. Also currently we are restricting to **ONE** Goal Event per workflow.
 
 ### How to set up Goal Events in workflows
 
@@ -69,7 +66,7 @@ For the "**Received email event**" filter, make sure to select the events you wi
 -   **Discount Usage:** If you've sent an email with a discount code, set a goal for when a contact opens the discount email, triggering a workflow to remind them to use their discount before it expires.
 -   **Sales Follow-up:**  For sales teams, if a proposal or quotation is sent via email, set a goal for when the contact opens the email, triggering a follow-up workflow to keep the deal moving.
 
-## FAQs:
+### FAQs:
 
 **Can a single email event meet multiple goal events?**
 
@@ -93,7 +90,9 @@ Goal events currently support positive conditions, i.e., when a contact takes a 
 
 **2. Clicked a Trigger Link:**
 
-For the "**Clicked Trigger link,**" please select the trigger links listed in the dropdown menu. If you have not created a trigger link, please check out this article before continuing: [Trigger Links - Overview](![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/155000617150/original/m8aosRgNxWWLr89GKKLseb9NDHDR1bAZ7g.gif?1686137755)
+For the "**Clicked Trigger link,**" please select the trigger links listed in the dropdown menu. If you have not created a trigger link, please check out this article before continuing: [Trigger Links - Overview]
+
+![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/155000617150/original/m8aosRgNxWWLr89GKKLseb9NDHDR1bAZ7g.gif?1686137755)
 
 **Usage Cases:**
 
@@ -107,8 +106,6 @@ For the "**Clicked Trigger link,**" please select the trigger links listed in th
 -   Trial Activation: For software companies offering a free trial, trigger an onboarding workflow when a contact clicks on the "Activate Trial" link.
 -   Affiliate Marketing: If you're an affiliate marketer, trigger a follow-up workflow when a contact clicks on your affiliate link.
 -   Download Confirmation: If you're offering a free resource download, set a goal event for when a contact clicks the download link, triggering a follow-up workflow to engage the contact further.
-
-## FAQs:
 
 **What if a contact clicks the trigger link before they enter the workflow? Will it still trigger the goal event?**
 
@@ -163,8 +160,6 @@ The contact will be pulled into the goal step and continue once the tag is added
 -   **Upsell/Cross-sell:** If a customer purchases a particular product or service, a specific tag could be added that triggers a workflow designed to upsell or cross-sell related products or services.
 -   **Trial Users:**  For software or subscription-based services, add a "Trial User" tag to contacts on a free trial and trigger a workflow designed to convert these trials into paid subscriptions.
 
-## FAQs:
-
 **How can I track if a tag was added or removed externally, outside the workflow?**
   
 Yes, the system "listens" for any changes to a contact's tags, irrespective of where that change comes from, and will trigger the Goal Event accordingly.   
@@ -207,8 +202,6 @@ For Appointment Status, please select a Calendar from the dropdown menu and then
 -   **Customer Support or Service Appointments:** If your organization provides customer support or services that require appointments, you could set up a workflow where a "Confirmed" or "Showed" appointment status acts as a goal event. When customers confirm an appointment or show up for their scheduled service, they could be moved to the next step in the workflow, receiving a customer satisfaction survey or a reminder for their next service appointment.
 -   **Consulting or Coaching Services:**  If you're a consultant or coach, a "Confirmed" appointment status for a consulting session could be the goal event in your workflow. Once clients confirm a session, they could be moved to a step where they receive preparatory materials or questions to consider before the session.
 -   **Interview Process for HR:** In a human resources context, you could have a workflow where a "Showed" appointment status for an interview acts as a goal event. When a candidate attends the interview, the workflow could move them to the next step, such as a background check or receiving a feedback survey about the interview process.
-
-## FAQs
 
 **How does the system handle multiple contacts meeting the Appointment Goal Event simultaneously?**
   

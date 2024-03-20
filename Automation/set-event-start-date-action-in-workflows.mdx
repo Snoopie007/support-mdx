@@ -71,12 +71,17 @@ For Custom Fields, you can use pre-created Custom Date Field custom values to te
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48298236884/original/gwHSiCax_EfG1l7AxH6HluPYX1j0BQ6Gqg.png?1684431732)
 
-**Please Note:**
->The "Set Event Start Date/Time" action often allows you to use a variety of date and time formats. Here are some formats that are commonly accepted:
->
->**MM-DD-YYYY HH:MM**: This format includes the month (MM), day (DD), and year (YYYY), followed by the time in 24-hour format (HH:MM). For example, December 21st, 2021 at 8:30 AM would be written as 12-21-2021 at 08:30.
->
->**DD-MMM-YYYY HH:MM**: This format includes the day (DD), the abbreviated month (MMM), and the year (YYYY), followed by the time in 24-hour format (HH:MM). For example, October 21st, 2021 at 8:30 AM would be written as 21-OCT-2021 at 08:30.
+**Please Note:** 
+
+The "Set Event Start Date/Time" action often allows you to use a variety of date and time formats. Here are some formats that are commonly accepted:
+
+**MM-DD-YYYY HH:MM**: 
+
+This format includes the month (MM), day (DD), and year (YYYY), followed by the time in 24-hour format (HH:MM). For example, December 21st, 2021 at 8:30 AM would be written as 12-21-2021 at 08:30.
+
+**DD-MMM-YYYY HH:MM**: 
+
+This format includes the day (DD), the abbreviated month (MMM), and the year (YYYY), followed by the time in 24-hour format (HH:MM). For example, October 21st, 2021 at 8:30 AM would be written as 21-OCT-2021 at 08:30.
 
 Select the option you wish to use and fill out the necessary information. For example, if you select a specific date and time, you'll need to enter the exact date and time for the event.
 Save the action to add it to your Workflow.
@@ -91,44 +96,43 @@ For example, if you set this to 2 days before, the Workflow will wait and send o
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/48298238250/original/j45I8Z0GTEeu8JjGR65Qo_wAe5LKoJNigA.png?1684432283)
 
-**Please Note:**
->The Wait for Event/Appointment Time Action has some further configurations.
->
->**Event / Appointment Time:** This field typically relates to the event or appointment you've set with the "Set Event Start Date/Time" action. The "Wait for" action will hold until the specified time relative to this event or appointment.
->
->**UNTIL** - 
+**Please Note:** The Wait for Event/Appointment Time Action has some further configurations.
+
+**Event / Appointment Time:** This field typically relates to the event or appointment you've set with the "Set Event Start Date/Time" action. The "Wait for" action will hold until the specified time relative to this event or appointment.
+
+**UNTIL** - 
 When: This configuration allows you to set the wait time until the next action occurs. This is based on a period of months, days, hours, and minutes. For example, you could set this to wait until 2 days and 3 hours before the event time. Values that exceed the max limit will be distributed to the larger units of time. For instance, if you input 60 minutes, it will be converted to 1 hour.
->
->**IF THE TIMING OF THIS WAIT STEP IS ALREADY IN THE PAST, HOW SHOULD THE CONTACT PROCEED?**: This configuration determines how the system should handle instances where the wait time is already past due. Options typically include:
->
->Move to the next step: The workflow will skip the wait and proceed to the next step in the workflow.
->
->Move to a specific step: The workflow will skip the wait and move to a specific step that you designate.
->
->Skip all outbound communication actions, till the next wait or Event Start Date action: The workflow will skip any actions that involve sending communication (such as emails or SMS) until it encounters the next "Wait for Event/Appointment Time" or "Set Event Start Date/Time" action.
+
+**IF THE TIMING OF THIS WAIT STEP IS ALREADY IN THE PAST, HOW SHOULD THE CONTACT PROCEED?**: This configuration determines how the system should handle instances where the wait time is already past due. Options typically include:
+
+Move to the next step: The workflow will skip the wait and proceed to the next step in the workflow.
+
+Move to a specific step: The workflow will skip the wait and move to a specific step that you designate.
+
+Skip all outbound communication actions, till the next wait or Event Start Date action: The workflow will skip any actions that involve sending communication (such as emails or SMS) until it encounters the next "Wait for Event/Appointment Time" or "Set Event Start Date/Time" action.
 
 Save the action to confirm your changes.
 
 Remember, these actions are repeatable within the workflow. You can add multiple "Wait for Event/Appointment Time" actions to create events leading to or following the Event Start Date.
 
-## FAQs
+### FAQs
 
-### Q1: Can I use the "Set Event Start Date/Time" action for recurring events?
+**Q1: Can I use the "Set Event Start Date/Time" action for recurring events?**
 
 A1: Yes, it's typically possible to use this action for recurring events. You can set the Event Start Date/Time for the first instance and then use a "Go To" action to loop back to the start of the workflow for subsequent instances.  
 
-### Q2: Can I set multiple Event Start Dates/Times in the same workflow?
+**Q2: Can I set multiple Event Start Dates/Times in the same workflow?**
 
 A2: You can typically add multiple "Set Event Start Date/Time" actions within the same workflow. Each one could correspond to a different event or appointment, and you could then use corresponding "Wait for Event/Appointment Time" steps to create actions relative to each start date/time.
 
-### Q3: What happens if a contact enters the workflow after the Event Start Date/Time has passed?
+**Q3: What happens if a contact enters the workflow after the Event Start Date/Time has passed?**
 
 A3: The behavior depends on your settings for the "Wait for Event/Appointment Time" action. If you set it to "Move to the next step" or "Move to a specific step", the contact would skip past the wait action. If you set it to "Skip all outbound communication actions, till next wait or Event Start Date action", they would skip outbound communication steps until they encounter the next wait or start date/time action.
 
-### Q4: Can I use the "Set Event Start Date/Time" action without a corresponding "Wait for Event/Appointment Time" action?
+**Q4: Can I use the "Set Event Start Date/Time" action without a corresponding "Wait for Event/Appointment Time" action?**
 
 A4: It wouldn't be very useful when you could technically set an event start date/time without a subsequent "Wait for Event/Appointment Time" action. The main purpose of the "Set Event Start Date/Time" action is to establish a point in time that other actions can refer to.
 
-### Q5: If my workflow settings are set to respect Contact time zones, how does that affect the "Set Event Start Date/Time" action?
+**Q5: If my workflow settings are set to respect Contact time zones, how does that affect the "Set Event Start Date/Time" action?**
 
 A5: If your workflow management tool supports time zones, you would typically set the Event Start Date/Time in your time zone, and the tool would then adjust it based on each contact's time zone. If the workflow doesn't have time zone information for a contact, it would typically use your account's time zone by default.

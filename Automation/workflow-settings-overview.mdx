@@ -15,9 +15,10 @@ Here are the main categories of settings and the specific settings under each ca
 
 Workflow settings begin with managing communication.
 
-***Time Window:***
+**Time Window:**
 
 One such setting is the Time Window, which can be set to 'Any Time' or 'Specific Time.' For instance, when dealing with clients across various time zones, 'Specific Time' ensures messages are sent when most likely to be read.
+
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/155002171897/original/yAs0ojCYGvCemft88yb3SHZQBT9WQHgNGA.png?1688389843)   
 
 **How does Specific Time work?**
@@ -26,7 +27,7 @@ If the Time window is set to "Specific Time," messages will only be sent if they
 
 **Usage Cases for Time Window Setting**
 
-***Specific Time:***
+**Specific Time:**
 
 Usage Case 1: If you send marketing communications like promotional emails or special offers, setting your workflow to 'Specific Time' can help you send these messages during peak engagement hours.  
 
@@ -36,15 +37,15 @@ Usage Case 3: For time-sensitive workflows like flash sales or limited-time offe
 
 **Frequently Asked Questions for Time Window Setting:**
 
-***What happens if a message is scheduled outside the set Time Window?***
+**What happens if a message is scheduled outside the set Time Window?**
 
 If a message is set to be sent outside the specified Time Window, it will not be sent immediately. Instead, it will wait and be sent at the start of the next Time Window.
 
-***Can I set different Time Windows for different days of the week?***
+**Can I set different Time Windows for different days of the week?**
 
 Currently, the Time Window applies uniformly to all days of the week. You cannot specify different Time Windows for different days within the same workflow.
 
-***Is the Time Window setting based on my or the contact's Timezone?***
+**Is the Time Window setting based on my or the contact's Timezone?**
 
 The Time Window follows the Timezone setting you chose in your Workflow Settings: Account Timezone or Contact Timezone.
 
@@ -69,7 +70,7 @@ If the Timezone is set to "Contact Timezone," then the Wait steps and Time Windo
 
 **Usage Cases for Timezone Settings**
 
-***Account Timezone:***
+**Account Timezone:**
 
 Usage Case 1: If you're a business that operates primarily in one geographical location, setting the workflow to account for Timezone ensures that all your communications are consistent and relevant to your business hours.
 
@@ -77,7 +78,7 @@ Usage Case 2: If you're running an event (like a webinar or a live Q&A) schedule
 
 Usage Case 3: In an internal communication workflow meant for employees of a company that operates in a single timezone, setting the workflow to account for Timezone guarantees that all employees receive the communications as intended.
 
-***Contact Timezone:***
+**Contact Timezone:**
 
 Usage Case 1: If you're a global business with customers across various time zones, setting your workflow to contact Timezone ensures that your communications are sent conveniently for each customer.
 
@@ -87,15 +88,15 @@ Usage Case 3: For a personalizing birthday or anniversary messages, setting your
 
 **Frequently Asked Questions for Timezone Setting:**
 
-***If a contact has no specific timezone, which will be used?***
+**If a contact has no specific timezone, which will be used?**
 
 If the Timezone is set to "Contact Timezone" and the contact doesn't have a specific timezone, then the workflow will use the Account Timezone by default. 
 
-***What happens if I change my Account Timezone while a workflow is still running?***
+**What happens if I change my Account Timezone while a workflow is still running?**
 
 Any changes made to the Account Timezone won't affect the contacts in workflows that are currently running through those workflows. The change will only apply to new entries to those workflows.
 
-***Can I set different time zones for different steps within a workflow?***
+**Can I set different time zones for different steps within a workflow?**
 
 No, the Timezone setting applies to the entire workflow, not individual steps within the workflow.
 
@@ -116,15 +117,15 @@ Usage Case 3: If your workflow involves partnerships or affiliates, using a spec
 
 **Frequently Asked Questions for Sender Email Setting:**
 
-***Can I set different sender emails for different actions within the same workflow?***
+**Can I set different sender emails for different actions within the same workflow?**
 
 You can override the default sender email by specifying a different 'from' name and 'from' email in individual email actions within the workflow.
 
-***What happens if my Sender Email is not verified?***
+**What happens if my Sender Email is not verified?**
 
 If the Sender's Email is not verified, your emails may not be delivered successfully. Ensure your email service provider verifies your Sender Email.
 
-***Can I use different Sender Emails for different workflows?***
+**Can I use different Sender Emails for different workflows?**
 
 Yes, you can set different Sender Emails for each workflow. The default Sender Email can be changed in the individual workflow's settings.
 
@@ -136,8 +137,7 @@ This setting determines whether a contact can re-enter the workflow once complet
 
 Allows a single contact to re-enter once it has left this workflow. If the contact attempts to re-enter while still enrolled in this workflow, it will get skipped.
   
-**Please Note:**
->Workflows that utilize an appointment or invoice-based input trigger will permit contacts to enter multiple times, irrespective of the state of the "Allow Re-Entry" setting. Even if "Allow Re-Entry" is not activated, these specific input triggers will override the setting and Allow Re-Entry entries of the same contact after they have gone through the workflow or been removed.
+**Please Note:** Workflows that utilize an appointment or invoice-based input trigger will permit contacts to enter multiple times, irrespective of the state of the "Allow Re-Entry" setting. Even if "Allow Re-Entry" is not activated, these specific input triggers will override the setting and Allow Re-Entry entries of the same contact after they have gone through the workflow or been removed.
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/155002172338/original/h6XBwFttlEfwVDVAo5FeJaHAW31ddww-pA.png?1688390063)
 
@@ -153,15 +153,15 @@ Usage Case 3: If a contact didn't engage with the workflow the first time around
 
 **Frequently Asked Questions about Allow Re-Entry Settings:**
 
-***What happens if a contact is currently in the workflow and the same contact tries to enter again?***
+**What happens if a contact is currently in the workflow and the same contact tries to enter again?**
 
 If 'Allow Re-Entry' is enabled, the contact will not re-enter the workflow if they are currently active. The setting only allows re-entry after a contact has either completed or been removed from the workflow.
 
-***If 'Allow Re-Entry' is turned on, will a contact go through the workflow again immediately after they finish?***
+**If 'Allow Re-Entry' is turned on, will a contact go through the workflow again immediately after they finish?**
 
 No, the contact will only re-enter the workflow if the entry trigger occurs again after the contact has finished or been removed from the workflow.  
 
-***Can I set 'Allow Re-Entry' for specific contacts only?***
+**Can I set 'Allow Re-Entry' for specific contacts only?**
 
 No, 'Allow Re-Entry' is a workflow setting that applies to all contacts for that specific workflow. You might consider creating different workflows if you want different behaviors for different contacts.
 
@@ -183,15 +183,15 @@ Usage Case 3: If a customer responds to your initial troubleshooting email for s
 
 **Frequently Asked Questions about Stop On Response Setting:**
 
-***What types of responses will trigger 'Stop On Response'?***
+**What types of responses will trigger 'Stop On Response'?**
 
 Any reply from the contact to an SMS, email, GMB Message, Facebook Message, or call sent from the workflow will trigger 'Stop On Response'..'
 
-***Does 'Stop On Response' end the workflow for all contacts if one contact responds?***
+**Does 'Stop On Response' end the workflow for all contacts if one contact responds?**
 
 No, 'Stop On Response' only ends the workflow for the specific contact who responded. It does not affect other contacts in the workflow.
 
-***Can I resume the workflow for contact after 'Stop On Response' has been triggered?***
+**Can I resume the workflow for contact after 'Stop On Response' has been triggered?**
 
 No, once 'Stop On Response' is triggered, the workflow ends for that contact. If you want the contact to go through the workflow again, re-enter them, provided the 'Allow Re-Entry' setting is enabled.
 
@@ -213,28 +213,28 @@ Usage Case 3: If you're using a workflow to send periodic reminders or updates, 
 
 **Frequently Asked Questions about Mark as Read Setting:**
 
-***Does 'Mark as Read' apply to incoming messages as well?***
+**Does 'Mark as Read' apply to incoming messages as well?**
 
 No, 'Mark as Read' applies only to inbound messages from contacts. It does not mark outgoing automated messages sent from the workflow as read.
 
-***If 'Mark as Read' is enabled, will I still see the messages sent from the workflow in the conversation tab?***
+**If 'Mark as Read' is enabled, will I still see the messages sent from the workflow in the conversation tab?**
 
 Yes, enabling 'Mark as Read' does not hide or remove the messages sent from the workflow. It simply marks them as read in the conversation tab.
 
-***Can I choose which types of messages are marked as read with the 'Mark as Read' setting?***
+**Can I choose which types of messages are marked as read with the 'Mark as Read' setting?**
 
 No, 'Mark as Read' applies to all types of outgoing automated messages from the workflow, including emails, SMS, calls, and voicemails.
 
-## Frequently Asked Questions 
+### Frequently Asked Questions 
 
-### Q1: Can I use different settings for different workflows?
+**Q1: Can I use different settings for different workflows?**
 
 A: Yes, each workflow can have its settings based on specific requirements.
 
-### Q2: What if I choose the wrong settings?
+**Q2: What if I choose the wrong settings?**
 
 A: Workflow settings can be updated anytime, so don't worry if you make a mistake or your needs change. However, changes will only apply to new entries into the workflow, not contacts already in it.
 
-### Q3: Is there a best practice for setting the Time Window?
+**Q3: Is there a best practice for setting the Time Window?**
 
 A: The 'best' setting depends on your audience, campaign, and goals. However, it's generally best to send communications when your audience is most likely active.
